@@ -8,7 +8,6 @@
 
 import Foundation
 
-// Challenges class
 public class Challenge {
     var description:String
     var sugestion:String
