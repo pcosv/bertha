@@ -8,15 +8,15 @@
 
 import Foundation
 
-// classe de Desafios
-public class Desafio {
-    var descricao:String
-    var sugestao:String
-    var midia:String = ""
+// Challenges class
+public class Challenge {
+    var description:String
+    var sugestion:String
+    var media:String = ""
     
-    init(descricao:String, sugestao:String, midia:String) {
-        self.descricao = descricao
-        self.sugestao = sugestao
-        self.midia = midia
+    init(description:String, sugestion:String, media:String) {
+        self.description = description
+        self.sugestion = sugestion
+        self.media = media
     }
 }
