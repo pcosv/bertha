@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		57038B6620911B04003051CE /* Desafio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57038B6520911B04003051CE /* Desafio.swift */; };
 		57AA84A62091170100B9A1A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AA84A52091170100B9A1A8 /* AppDelegate.swift */; };
 		57AA84A82091170100B9A1A8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AA84A72091170100B9A1A8 /* ViewController.swift */; };
 		57AA84AB2091170100B9A1A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57AA84A92091170100B9A1A8 /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		57038B6520911B04003051CE /* Desafio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Desafio.swift; sourceTree = "<group>"; };
 		57AA84A22091170100B9A1A8 /* bertha.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bertha.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57AA84A52091170100B9A1A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		57AA84A72091170100B9A1A8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 			children = (
 				57AA84A52091170100B9A1A8 /* AppDelegate.swift */,
 				57AA84A72091170100B9A1A8 /* ViewController.swift */,
+				57038B6520911B04003051CE /* Desafio.swift */,
 				57AA84A92091170100B9A1A8 /* Main.storyboard */,
 				57AA84AC2091170200B9A1A8 /* Assets.xcassets */,
 				57AA84AE2091170200B9A1A8 /* LaunchScreen.storyboard */,
@@ -256,6 +259,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57038B6620911B04003051CE /* Desafio.swift in Sources */,
 				57AA84A82091170100B9A1A8 /* ViewController.swift in Sources */,
 				57AA84A62091170100B9A1A8 /* AppDelegate.swift in Sources */,
 			);
