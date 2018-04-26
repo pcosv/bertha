@@ -13,11 +13,13 @@ public class Challenge {
     var sugestion:String = ""
     var media:String = ""
     var image:UIImage
+    var concept:Concept
     
-    init(description:String, sugestion:String, media:String, image: UIImage) {
+    init(description:String, sugestion:String, media:String, image: UIImage, concept:Concept) {
         self.description = description
         self.sugestion = sugestion
         self.media = media
         self.image = image
+        self.concept = concept
     }
 }
