@@ -8,21 +8,45 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
-    @IBOutlet weak var challengeContainer: UIView!
+class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 5
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = carouselView.dequeueReusableCell(withReuseIdentifier: "carouselIdentifier", for: indexPath) as! CarouselCollectionViewCell
+        
+        cell.labelteste1.text = "Tittle - \(indexPath.row + 1)"
+        cell.labelteste2.text = "Subtittle - \(indexPath.row + 1)"
+        // PAREI EM 17:00 DO TUTORIAL
+        
+        return cell
+    }
+    
     
     @IBOutlet weak var chooseButton: UIButton!
+    
+    @IBOutlet weak var carouselView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        challengeContainer.layer.cornerRadius = 10
-        challengeContainer.layer.shadowColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
-        challengeContainer.layer.shadowOpacity = 0.7
-        //challengeContainer.layer.shadowOffset = CGSize.zero
-        challengeContainer.layer.shadowRadius = 5
+        carouselView.register(UINib.init(nibName: "CarouselCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "carouselIdentifier")
         
+        let flowLayout = UPCarouselFlowLayout()
+        flowLayout.itemSize = CGSize(width: UIScreen.main.bounds.size.width - 60, height: carouselView.frame.size.height)
+        flowLayout.scrollDirection = .horizontal
+        flowLayout.sideItemScale = 0.8
+        flowLayout.sideItemAlpha = 1.0
+        flowLayout.spacingMode = .fixed(spacing: 5.0)
+        
+        carouselView.collectionViewLayout = flowLayout
+        
+        carouselView.delegate = self
+        carouselView.dataSource = self
+        
+
         chooseButton.layer.cornerRadius = 10
     }
 
