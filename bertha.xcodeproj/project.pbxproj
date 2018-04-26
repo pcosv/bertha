@@ -15,6 +15,7 @@
 		57AA84B02091170200B9A1A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57AA84AE2091170200B9A1A8 /* LaunchScreen.storyboard */; };
 		57AA84BB2091170200B9A1A8 /* berthaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AA84BA2091170200B9A1A8 /* berthaTests.swift */; };
 		57AA84C62091170200B9A1A8 /* berthaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AA84C52091170200B9A1A8 /* berthaUITests.swift */; };
+		DE24B36820925C4E0065DF1C /* bertha.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DE24B36620925C4E0065DF1C /* bertha.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		57AA84C12091170200B9A1A8 /* berthaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = berthaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		57AA84C52091170200B9A1A8 /* berthaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = berthaUITests.swift; sourceTree = "<group>"; };
 		57AA84C72091170200B9A1A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE24B36720925C4E0065DF1C /* bertha.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = bertha.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 		57AA84992091170100B9A1A8 = {
 			isa = PBXGroup;
 			children = (
+				DE24B36620925C4E0065DF1C /* bertha.xcdatamodeld */,
 				57AA84A42091170100B9A1A8 /* bertha */,
 				57AA84B92091170200B9A1A8 /* berthaTests */,
 				57AA84C42091170200B9A1A8 /* berthaUITests */,
@@ -260,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				57038B6620911B04003051CE /* Challenge.swift in Sources */,
+				DE24B36820925C4E0065DF1C /* bertha.xcdatamodeld in Sources */,
 				57AA84A82091170100B9A1A8 /* ViewController.swift in Sources */,
 				57AA84A62091170100B9A1A8 /* AppDelegate.swift in Sources */,
 			);
@@ -435,7 +439,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = SNKGQ9S9S3;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = bertha/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -453,7 +457,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = SNKGQ9S9S3;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = bertha/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -584,6 +588,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		DE24B36620925C4E0065DF1C /* bertha.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DE24B36720925C4E0065DF1C /* bertha.xcdatamodel */,
+			);
+			currentVersion = DE24B36720925C4E0065DF1C /* bertha.xcdatamodel */;
+			path = bertha.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 57AA849A2091170100B9A1A8 /* Project object */;
 }
