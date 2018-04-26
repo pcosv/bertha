@@ -104,7 +104,6 @@
 		57AA84992091170100B9A1A8 = {
 			isa = PBXGroup;
 			children = (
-				DE24B36620925C4E0065DF1C /* bertha.xcdatamodeld */,
 				57AA84A42091170100B9A1A8 /* bertha */,
 				57AA84B92091170200B9A1A8 /* berthaTests */,
 				57AA84C42091170200B9A1A8 /* berthaUITests */,
@@ -126,6 +125,7 @@
 		57AA84A42091170100B9A1A8 /* bertha */ = {
 			isa = PBXGroup;
 			children = (
+				DE24B36620925C4E0065DF1C /* bertha.xcdatamodeld */,
 				57AA84A52091170100B9A1A8 /* AppDelegate.swift */,
 				576FBD5E2092919D005E0C9D /* UPCarouselFlowLayout.swift */,
 				57AA84A72091170100B9A1A8 /* ViewController.swift */,
