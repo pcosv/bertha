@@ -7,19 +7,22 @@
 //
 
 import UIKit
+import CoreData
 
-public class Challenge {
-    var description:String
-    var sugestion:String = ""
-    var media:String = ""
-    var image:UIImage
-    var concept:Concept
+public class Challenge : NSManagedObject {
+    @NSManaged var challenge:String
+    @NSManaged var suggestion:String
+    @NSManaged var media:String
+    @NSManaged var image:NSData
+    @NSManaged var concept:Concept
     
-    init(description:String, sugestion:String, media:String, image: UIImage, concept:Concept) {
-        self.description = description
-        self.sugestion = sugestion
+    init(description:String, sugestion:String, media:String, image: UIImage, concept:Concept, context: NSManagedObjectContext) {
+        let entity = NSEntityDescription.entity(forEntityName: "Challenge", in: context)
+        super.init(entity: entity!, insertInto: context)
+        self.challenge = description
+        self.suggestion = sugestion
         self.media = media
-        self.image = image
+        self.image = UIImagePNGRepresentation(image) as NSData!
         self.concept = concept
     }
 }

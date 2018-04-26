@@ -7,13 +7,16 @@
 //
 
 import Foundation
+import CoreData
 
-class Concept{
-    var title:String
-    var description:String
+class Concept : NSManagedObject {
+    @NSManaged var title:String
+    @NSManaged var concept:String
     
-    init(title: String, description: String) {
+    init(title: String, description: String, context: NSManagedObjectContext) {
+        let entity = NSEntityDescription.entity(forEntityName: "Concept", in: context)
+        super.init(entity: entity!, insertInto: context)
         self.title = title
-        self.description = description
+        self.concept = description
     }
 }
