@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		57038B6620911B04003051CE /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57038B6520911B04003051CE /* Challenge.swift */; };
+		576FBD4E20926512005E0C9D /* Concept.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576FBD4D20926512005E0C9D /* Concept.swift */; };
 		57AA84A62091170100B9A1A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AA84A52091170100B9A1A8 /* AppDelegate.swift */; };
 		57AA84A82091170100B9A1A8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AA84A72091170100B9A1A8 /* ViewController.swift */; };
 		57AA84AB2091170100B9A1A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57AA84A92091170100B9A1A8 /* Main.storyboard */; };
@@ -37,6 +38,7 @@
 
 /* Begin PBXFileReference section */
 		57038B6520911B04003051CE /* Challenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
+		576FBD4D20926512005E0C9D /* Concept.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Concept.swift; sourceTree = "<group>"; };
 		57AA84A22091170100B9A1A8 /* bertha.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bertha.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57AA84A52091170100B9A1A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		57AA84A72091170100B9A1A8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 			children = (
 				57AA84A52091170100B9A1A8 /* AppDelegate.swift */,
 				57AA84A72091170100B9A1A8 /* ViewController.swift */,
+				576FBD4D20926512005E0C9D /* Concept.swift */,
 				57038B6520911B04003051CE /* Challenge.swift */,
 				57AA84A92091170100B9A1A8 /* Main.storyboard */,
 				57AA84AC2091170200B9A1A8 /* Assets.xcassets */,
@@ -266,6 +269,7 @@
 				DE24B36820925C4E0065DF1C /* bertha.xcdatamodeld in Sources */,
 				57AA84A82091170100B9A1A8 /* ViewController.swift in Sources */,
 				57AA84A62091170100B9A1A8 /* AppDelegate.swift in Sources */,
+				576FBD4E20926512005E0C9D /* Concept.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
