@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		57038B6620911B04003051CE /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57038B6520911B04003051CE /* Challenge.swift */; };
 		576FBD4E20926512005E0C9D /* Concept.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576FBD4D20926512005E0C9D /* Concept.swift */; };
+		576FBD52209278AC005E0C9D /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 576FBD51209278AB005E0C9D /* iCarousel.m */; };
+		576FBD5520927920005E0C9D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 576FBD5420927920005E0C9D /* QuartzCore.framework */; };
 		57AA84A62091170100B9A1A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AA84A52091170100B9A1A8 /* AppDelegate.swift */; };
 		57AA84A82091170100B9A1A8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AA84A72091170100B9A1A8 /* ViewController.swift */; };
 		57AA84AB2091170100B9A1A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57AA84A92091170100B9A1A8 /* Main.storyboard */; };
@@ -39,6 +41,10 @@
 /* Begin PBXFileReference section */
 		57038B6520911B04003051CE /* Challenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
 		576FBD4D20926512005E0C9D /* Concept.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Concept.swift; sourceTree = "<group>"; };
+		576FBD4F209278AA005E0C9D /* bertha-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "bertha-Bridging-Header.h"; sourceTree = "<group>"; };
+		576FBD50209278AB005E0C9D /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
+		576FBD51209278AB005E0C9D /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarousel.m; sourceTree = "<group>"; };
+		576FBD5420927920005E0C9D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		57AA84A22091170100B9A1A8 /* bertha.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bertha.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57AA84A52091170100B9A1A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		57AA84A72091170100B9A1A8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				576FBD5520927920005E0C9D /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +87,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		576FBD532092791F005E0C9D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				576FBD5420927920005E0C9D /* QuartzCore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		57AA84992091170100B9A1A8 = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +103,7 @@
 				57AA84B92091170200B9A1A8 /* berthaTests */,
 				57AA84C42091170200B9A1A8 /* berthaUITests */,
 				57AA84A32091170100B9A1A8 /* Products */,
+				576FBD532092791F005E0C9D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -107,11 +123,14 @@
 				57AA84A52091170100B9A1A8 /* AppDelegate.swift */,
 				57AA84A72091170100B9A1A8 /* ViewController.swift */,
 				576FBD4D20926512005E0C9D /* Concept.swift */,
+				576FBD50209278AB005E0C9D /* iCarousel.h */,
+				576FBD51209278AB005E0C9D /* iCarousel.m */,
 				57038B6520911B04003051CE /* Challenge.swift */,
 				57AA84A92091170100B9A1A8 /* Main.storyboard */,
 				57AA84AC2091170200B9A1A8 /* Assets.xcassets */,
 				57AA84AE2091170200B9A1A8 /* LaunchScreen.storyboard */,
 				57AA84B12091170200B9A1A8 /* Info.plist */,
+				576FBD4F209278AA005E0C9D /* bertha-Bridging-Header.h */,
 			);
 			path = bertha;
 			sourceTree = "<group>";
@@ -202,6 +221,7 @@
 				TargetAttributes = {
 					57AA84A12091170100B9A1A8 = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 0930;
 					};
 					57AA84B52091170200B9A1A8 = {
 						CreatedOnToolsVersion = 9.3;
@@ -268,6 +288,7 @@
 				57038B6620911B04003051CE /* Challenge.swift in Sources */,
 				DE24B36820925C4E0065DF1C /* bertha.xcdatamodeld in Sources */,
 				57AA84A82091170100B9A1A8 /* ViewController.swift in Sources */,
+				576FBD52209278AC005E0C9D /* iCarousel.m in Sources */,
 				57AA84A62091170100B9A1A8 /* AppDelegate.swift in Sources */,
 				576FBD4E20926512005E0C9D /* Concept.swift in Sources */,
 			);
@@ -442,6 +463,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = bertha/Info.plist;
@@ -451,6 +473,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ufpe.br.bertha;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "bertha/bertha-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -460,6 +484,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = bertha/Info.plist;
@@ -469,6 +494,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ufpe.br.bertha;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "bertha/bertha-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

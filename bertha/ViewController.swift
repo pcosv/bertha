@@ -31,12 +31,6 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func labelForString(string: String) -> UIView {
-        let text = UIView()
-        text.backgroundColor = #colorLiteral(red: 0.7647058824, green: 0.9294117647, blue: 0.9215686275, alpha: 1)
-    
-        return text
-    }
 
 
 }
