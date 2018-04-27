@@ -8,8 +8,10 @@
 
 import UIKit
 
+// Classe que contém a célula do carrossel, no caso, cada cartinha
 class CarouselCollectionViewCell: UICollectionViewCell {
 
+    // elementos da célula
     @IBOutlet weak var viewteste: UIView!
     @IBOutlet weak var labelteste1: UILabel!
     @IBOutlet weak var labelteste2: UILabel!
