@@ -22,7 +22,7 @@ public class Challenge : NSManagedObject {
         self.challenge = description
         self.suggestion = sugestion
         self.media = media
-        self.image = UIImagePNGRepresentation(image) as NSData!
+        self.image = (UIImagePNGRepresentation(image) as NSData?)!
         self.concept = concept
     }
 }
