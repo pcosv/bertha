@@ -13,7 +13,8 @@
 		576FBD5520927920005E0C9D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 576FBD5420927920005E0C9D /* QuartzCore.framework */; };
 		576FBD5C20928CDC005E0C9D /* CarouselCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576FBD5A20928CDC005E0C9D /* CarouselCollectionViewCell.swift */; };
 		576FBD5D20928CDC005E0C9D /* CarouselCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 576FBD5B20928CDC005E0C9D /* CarouselCollectionViewCell.xib */; };
-		576FBD5F2092919E005E0C9D /* UPCarouselFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576FBD5E2092919D005E0C9D /* UPCarouselFlowLayout.swift */; };
+		5799B48920938091002957F1 /* dog.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 5799B48820938091002957F1 /* dog.jpeg */; };
+		5799B48C209382C4002957F1 /* UPCarouselFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5799B48A209382C4002957F1 /* UPCarouselFlowLayout.swift */; };
 		57AA84A62091170100B9A1A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AA84A52091170100B9A1A8 /* AppDelegate.swift */; };
 		57AA84A82091170100B9A1A8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AA84A72091170100B9A1A8 /* ViewController.swift */; };
 		57AA84AB2091170100B9A1A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57AA84A92091170100B9A1A8 /* Main.storyboard */; };
@@ -50,7 +51,9 @@
 		576FBD5420927920005E0C9D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		576FBD5A20928CDC005E0C9D /* CarouselCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselCollectionViewCell.swift; sourceTree = "<group>"; };
 		576FBD5B20928CDC005E0C9D /* CarouselCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarouselCollectionViewCell.xib; sourceTree = "<group>"; };
-		576FBD5E2092919D005E0C9D /* UPCarouselFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UPCarouselFlowLayout.swift; path = ../../UPCarouselFlowLayout/UPCarouselFlowLayout/UPCarouselFlowLayout.swift; sourceTree = "<group>"; };
+		5799B48820938091002957F1 /* dog.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = dog.jpeg; path = ../../dog.jpeg; sourceTree = "<group>"; };
+		5799B48A209382C4002957F1 /* UPCarouselFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UPCarouselFlowLayout.swift; path = ../../UPCarouselFlowLayout/UPCarouselFlowLayout/UPCarouselFlowLayout.swift; sourceTree = "<group>"; };
+		5799B48B209382C4002957F1 /* UPCarouselFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UPCarouselFlowLayout.h; path = ../../UPCarouselFlowLayout/UPCarouselFlowLayout/UPCarouselFlowLayout.h; sourceTree = "<group>"; };
 		57AA84A22091170100B9A1A8 /* bertha.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bertha.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57AA84A52091170100B9A1A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		57AA84A72091170100B9A1A8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -127,7 +130,9 @@
 			children = (
 				DE24B36620925C4E0065DF1C /* bertha.xcdatamodeld */,
 				57AA84A52091170100B9A1A8 /* AppDelegate.swift */,
-				576FBD5E2092919D005E0C9D /* UPCarouselFlowLayout.swift */,
+				5799B48820938091002957F1 /* dog.jpeg */,
+				5799B48B209382C4002957F1 /* UPCarouselFlowLayout.h */,
+				5799B48A209382C4002957F1 /* UPCarouselFlowLayout.swift */,
 				57AA84A72091170100B9A1A8 /* ViewController.swift */,
 				576FBD5A20928CDC005E0C9D /* CarouselCollectionViewCell.swift */,
 				576FBD5B20928CDC005E0C9D /* CarouselCollectionViewCell.xib */,
@@ -267,6 +272,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5799B48920938091002957F1 /* dog.jpeg in Resources */,
 				576FBD5D20928CDC005E0C9D /* CarouselCollectionViewCell.xib in Resources */,
 				57AA84B02091170200B9A1A8 /* LaunchScreen.storyboard in Resources */,
 				57AA84AD2091170200B9A1A8 /* Assets.xcassets in Resources */,
@@ -301,7 +307,7 @@
 				57AA84A82091170100B9A1A8 /* ViewController.swift in Sources */,
 				576FBD52209278AC005E0C9D /* iCarousel.m in Sources */,
 				57AA84A62091170100B9A1A8 /* AppDelegate.swift in Sources */,
-				576FBD5F2092919E005E0C9D /* UPCarouselFlowLayout.swift in Sources */,
+				5799B48C209382C4002957F1 /* UPCarouselFlowLayout.swift in Sources */,
 				576FBD4E20926512005E0C9D /* Concept.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
