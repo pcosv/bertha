@@ -16,6 +16,26 @@ class CarouselCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var labelteste1: UILabel!
     @IBOutlet weak var labelteste2: UILabel!
     
+    var isOpen = false
+    
+    @IBAction func flipCell(_ sender: Any) {
+        if isOpen {
+            isOpen = false
+            
+            // animação de flip
+            UIView.transition(with: viewteste, duration: 0.5, options: .transitionFlipFromLeft, animations: nil, completion: nil)
+            
+            // atualização de label
+            labelteste1.text = "VERSO"
+        }
+        else {
+            isOpen = true
+            UIView.transition(with: viewteste, duration: 0.5, options: .transitionFlipFromLeft, animations: nil, completion: nil)
+            
+            labelteste1.text = "FRENTE"
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -7,19 +7,15 @@
 //
 
 import UIKit
-
-
 // Classe principal do aplicativo
 
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
-    
     
     // botão de escolher o desafio
     @IBOutlet weak var chooseButton: UIButton!
     
     // collectionview onde é implementado o carrossel
     @IBOutlet weak var carouselView: UICollectionView!
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
