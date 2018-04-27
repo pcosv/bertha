@@ -1,21 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14133" systemVersion="17D47" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14133" systemVersion="17E199" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Challenge" representedClassName="Challenge" syncable="YES">
         <attribute name="challenge" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="image" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
         <attribute name="media" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="suggestion" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="challengeConcept" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Concept" inverseName="conceptChallenge" inverseEntity="Concept" syncable="YES"/>
+        <relationship name="concept" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Concept" inverseName="challenge" inverseEntity="Concept" syncable="YES"/>
     </entity>
     <entity name="Concept" representedClassName="Concept" syncable="YES">
         <attribute name="concept" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="conceptChallenge" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Challenge" inverseName="challengeConcept" inverseEntity="Challenge" syncable="YES"/>
+        <relationship name="challenge" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Challenge" inverseName="concept" inverseEntity="Challenge" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Challenge" positionX="-18" positionY="27" width="128" height="133"/>
-        <element name="Concept" positionX="250" positionY="63" width="128" height="103"/>
+        <element name="Challenge" positionX="-18" positionY="27" width="128" height="120"/>
+        <element name="Concept" positionX="250" positionY="63" width="128" height="105"/>
     </elements>
 </model>

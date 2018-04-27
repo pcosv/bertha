@@ -12,6 +12,7 @@ import CoreData
 class Concept : NSManagedObject {
     @NSManaged var title:String
     @NSManaged var concept:String
+    @NSManaged var challenge: Challenge
     
     init(title: String, description: String, context: NSManagedObjectContext) {
         let entity = NSEntityDescription.entity(forEntityName: "Concept", in: context)
