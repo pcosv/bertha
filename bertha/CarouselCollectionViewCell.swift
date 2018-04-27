@@ -12,7 +12,7 @@ import UIKit
 class CarouselCollectionViewCell: UICollectionViewCell {
 
     // elementos da célula
-    @IBOutlet weak var viewteste: UIView!
+    @IBOutlet weak var viewCard: UIView!
     @IBOutlet weak var labelteste1: UILabel!
     @IBOutlet weak var labelteste2: UILabel!
     
@@ -23,14 +23,14 @@ class CarouselCollectionViewCell: UICollectionViewCell {
             isOpen = false
             
             // animação de flip
-            UIView.transition(with: viewteste, duration: 0.5, options: .transitionFlipFromLeft, animations: nil, completion: nil)
+            UIView.transition(with: viewCard, duration: 0.8, options: .transitionFlipFromLeft, animations: nil, completion: nil)
             
             // atualização de label
             labelteste1.text = "VERSO"
         }
         else {
             isOpen = true
-            UIView.transition(with: viewteste, duration: 0.5, options: .transitionFlipFromLeft, animations: nil, completion: nil)
+            UIView.transition(with: viewCard, duration: 0.8, options: .transitionFlipFromLeft, animations: nil, completion: nil)
             
             labelteste1.text = "FRENTE"
         }
@@ -41,12 +41,12 @@ class CarouselCollectionViewCell: UICollectionViewCell {
         // Initialization code
         
         DispatchQueue.main.async {
-            self.viewteste.layer.shadowColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
-            self.viewteste.layer.opacity = 0.5
-            self.viewteste.layer.opacity = 10.0
-            self.viewteste.layer.shadowOffset = .zero
-            self.viewteste.layer.shadowPath = UIBezierPath(rect: self.viewteste.bounds).cgPath
-            self.viewteste.layer.shouldRasterize = true
+            self.viewCard.layer.cornerRadius = 10
+            self.viewCard.layer.shadowColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
+            self.viewCard.layer.opacity = 10.0
+            self.viewCard.layer.shadowOffset = .zero
+            self.viewCard.layer.shadowPath = UIBezierPath(rect: self.viewCard.bounds).cgPath
+            self.viewCard.layer.shouldRasterize = true
 
 
 
