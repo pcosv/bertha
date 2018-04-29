@@ -17,6 +17,11 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     // collectionview onde é implementado o carrossel
     @IBOutlet weak var carouselView: UICollectionView!
     
+    // modal inferior com selos alcançados
+    @IBOutlet weak var selosView: UIView!
+    
+    var starPressed = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -48,18 +53,35 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     // função que diz a quantidade de cartas (no caso, desafios)
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return 10
     }
     
     // função que atualiza as labels ao dar swipe na carta
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = carouselView.dequeueReusableCell(withReuseIdentifier: "carouselIdentifier", for: indexPath) as! CarouselCollectionViewCell
-        
-        cell.labelteste1.text = "Title - \(indexPath.row + 1)"
-        cell.labelteste2.text = "Subtitle - \(indexPath.row + 1)"
+        // aqui deve-se guardar o desafio atual e atualizar as labels da frente da carta
+        cell.conceptTitle.text = "Title - \(indexPath.row + 1)"
+        cell.conceptBody.text = "Subtitle - \(indexPath.row + 1)"
         return cell
     }
-
+    
+    // função que chama pop up inferior com os selos já alcançados
+    @IBAction func showLearnedConcepts(_ sender: UIButton) {
+        
+        if starPressed == 0{
+            selosView.isHidden = false
+            starPressed = 1
+            // calcular largura do modal em função do tamanho da tela
+            selosView.frame = CGRect(x: 0, y: 435, width: 375, height: 260)
+            selosView.layer.cornerRadius = 25
+            self.view.addSubview(selosView)
+        } else{
+            starPressed = 0
+            selosView.isHidden = true
+        }
+ 
+    }
+    
 
 }
 

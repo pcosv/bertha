@@ -13,11 +13,12 @@ class CarouselCollectionViewCell: UICollectionViewCell {
 
     // elementos da célula
     @IBOutlet weak var viewCard: UIView!
-    @IBOutlet weak var labelteste1: UILabel!
-    @IBOutlet weak var labelteste2: UILabel!
+    @IBOutlet weak var conceptTitle: UILabel!
+    @IBOutlet weak var conceptBody: UILabel!
     
     var isOpen = false
     
+    // essa função deve receber o desafio atual e mudar as labels de acordo com o flip
     @IBAction func flipCell(_ sender: Any) {
         if isOpen {
             isOpen = false
@@ -26,13 +27,13 @@ class CarouselCollectionViewCell: UICollectionViewCell {
             UIView.transition(with: viewCard, duration: 0.8, options: .transitionFlipFromLeft, animations: nil, completion: nil)
             
             // atualização de label
-            labelteste1.text = "VERSO"
+            conceptTitle.text = "Titulo do conceito"
         }
         else {
             isOpen = true
             UIView.transition(with: viewCard, duration: 0.8, options: .transitionFlipFromLeft, animations: nil, completion: nil)
             
-            labelteste1.text = "FRENTE"
+            conceptTitle.text = "Titulo do desafio"
         }
     }
     
@@ -47,7 +48,11 @@ class CarouselCollectionViewCell: UICollectionViewCell {
             self.viewCard.layer.shadowOffset = .zero
             self.viewCard.layer.shadowPath = UIBezierPath(rect: self.viewCard.bounds).cgPath
             self.viewCard.layer.shouldRasterize = true
-
+            
+            // Paulinha, mudei aqui
+            let maxSize = CGSize(width: 265, height: 300)
+            let size = self.conceptTitle.sizeThatFits(maxSize)
+            self.conceptTitle.frame = CGRect(origin: CGPoint(x: 0, y: 0), size: size)
 
 
         }
