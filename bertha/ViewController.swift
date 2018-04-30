@@ -9,39 +9,23 @@
 import UIKit
 // Classe principal do aplicativo
 
-class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class ViewController: UIViewController {
     
     // botão de escolher o desafio
     @IBOutlet weak var chooseButton: UIButton!
-    
-    // collectionview onde é implementado o carrossel
-    @IBOutlet weak var carouselView: UICollectionView!
-    
     // modal inferior com selos alcançados
     @IBOutlet weak var selosView: UIView!
+    // elementos da célula
+    @IBOutlet weak var viewCard: UIView!
+    @IBOutlet weak var conceptTitle: UILabel!
+    @IBOutlet weak var conceptBody: UILabel!
     
+    var isOpen = false
     var starPressed = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        carouselView.register(UINib.init(nibName: "CarouselCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "carouselIdentifier")
-      
-        //Context - CoreData
-        let contextVC = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        var data = Data(context: contextVC)
-      
-        // configurações do carrossel
-        let flowLayout = UPCarouselFlowLayout()
-        flowLayout.itemSize = CGSize(width: UIScreen.main.bounds.size.width - 60, height: carouselView.frame.size.height)
-        flowLayout.scrollDirection = .horizontal
-        flowLayout.sideItemScale = 0.8
-        flowLayout.sideItemAlpha = 1.0
-        flowLayout.spacingMode = .fixed(spacing: 5.0)
-        
-        carouselView.collectionViewLayout = flowLayout
-        carouselView.delegate = self
-        carouselView.dataSource = self
+
         
         // configurações do botão de escolher desafio
         chooseButton.layer.cornerRadius = 10
@@ -53,18 +37,10 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     // função que diz a quantidade de cartas (no caso, desafios)
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
-    }
+
     
     // função que atualiza as labels ao dar swipe na carta
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = carouselView.dequeueReusableCell(withReuseIdentifier: "carouselIdentifier", for: indexPath) as! CarouselCollectionViewCell
-        // aqui deve-se guardar o desafio atual e atualizar as labels da frente da carta
-        cell.conceptTitle.text = "Title - \(indexPath.row + 1)"
-        cell.conceptBody.text = "Subtitle - \(indexPath.row + 1)"
-        return cell
-    }
+
     
     // função que chama pop up inferior com os selos já alcançados
     @IBAction func showLearnedConcepts(_ sender: UIButton) {
@@ -82,6 +58,42 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         }
  
     }
+    
+    // essa função deve receber o desafio atual e mudar as labels de acordo com o flip
+    @IBAction func flipCell(_ sender: Any) {
+        if isOpen {
+            isOpen = false
+            
+            // animação de flip
+            UIView.transition(with: viewCard, duration: 0.8, options: .transitionFlipFromLeft, animations: nil, completion: nil)
+            
+            // atualização de label
+            conceptTitle.text = "Titulo do conceito"
+        }
+        else {
+            isOpen = true
+            UIView.transition(with: viewCard, duration: 0.8, options: .transitionFlipFromLeft, animations: nil, completion: nil)
+            
+            conceptTitle.text = "Titulo do desafio"
+        }
+    }
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
+        
+//        DispatchQueue.main.async {
+//            self.viewCard.layer.cornerRadius = 10
+//            self.viewCard.layer.shadowColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
+//            self.viewCard.layer.opacity = 10.0
+//            self.viewCard.layer.shadowOffset = .zero
+//            self.viewCard.layer.shadowPath = UIBezierPath(rect: self.viewCard.bounds).cgPath
+//            self.viewCard.layer.shouldRasterize = true
+//            
+//            
+//        }
+    }
+
     
 
 }
