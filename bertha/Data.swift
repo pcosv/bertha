@@ -51,7 +51,7 @@ class Data {
                 Challenge(description: "Assista Tempos Modernos, filme que mostra a rotina de um operário numa linha de montagem e suas dificuldades.", media: "https://www.youtube.com/watch?v=FNv7M-UPNuY", censura: 0, image: #imageLiteral(resourceName: "industry"), concept: concepts[9], context: context)
         
             ]
-            relationships()
+            setRelationships()
             (UIApplication.shared.delegate as! AppDelegate).saveContext()
         } else {
             self.concepts = concepts
@@ -59,12 +59,22 @@ class Data {
         }
     }
     
-    func relationships(){
+    func setRelationships(){
         for concept in concepts {
             for challenge in challenges {
                 concept.challenge = challenge
                 challenge.concept = concept
             }
         }
+    }
+    
+    func getDoneConcepts() -> [Concept] {
+        var badges = [Concept]()
+        for concept in concepts {
+            if concept.done {
+                badges.append(concept)
+            }
+        }
+        return badges
     }
 }
