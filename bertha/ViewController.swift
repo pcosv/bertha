@@ -21,6 +21,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     @IBOutlet weak var selosView: UIView!
     
     var starPressed = 0
+    var data: Data
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +29,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         carouselView.register(UINib.init(nibName: "CarouselCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "carouselIdentifier")
       
         //Context - CoreData
-        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        let contextVC = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        data = Data(context: contextVC)
       
         // configurações do carrossel
         let flowLayout = UPCarouselFlowLayout()
