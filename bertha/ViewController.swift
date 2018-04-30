@@ -47,6 +47,8 @@ class ViewController: UIViewController, iCarouselDelegate, iCarouselDataSource {
         tempView.backgroundColor = #colorLiteral(red: 0.7647058824, green: 0.9294117647, blue: 0.9215686275, alpha: 1)
         tempView.layer.cornerRadius = 10
         
+        // parei aqui criando as labels do card e o botão de virar a carta
+        
         return tempView
     }
     
