@@ -21,7 +21,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     @IBOutlet weak var selosView: UIView!
     
     var starPressed = 0
-    var data: Data
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +29,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
       
         //Context - CoreData
         let contextVC = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        data = Data(context: contextVC)
+        var data = Data(context: contextVC)
       
         // configurações do carrossel
         let flowLayout = UPCarouselFlowLayout()
