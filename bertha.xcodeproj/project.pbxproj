@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3F86ED392093870B00DA1AD2 /* UPCarouselFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F86ED372093870B00DA1AD2 /* UPCarouselFlowLayout.swift */; };
+		48658983209730B40005E3DD /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48658982209730B40005E3DD /* Data.swift */; };
 		57038B6620911B04003051CE /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57038B6520911B04003051CE /* Challenge.swift */; };
 		576FBD4E20926512005E0C9D /* Concept.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576FBD4D20926512005E0C9D /* Concept.swift */; };
 		576FBD5520927920005E0C9D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 576FBD5420927920005E0C9D /* QuartzCore.framework */; };
@@ -42,6 +43,7 @@
 
 /* Begin PBXFileReference section */
 		3F86ED372093870B00DA1AD2 /* UPCarouselFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UPCarouselFlowLayout.swift; sourceTree = SOURCE_ROOT; };
+		48658982209730B40005E3DD /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		57038B6520911B04003051CE /* Challenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
 		576FBD4D20926512005E0C9D /* Concept.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Concept.swift; sourceTree = "<group>"; };
 		576FBD5420927920005E0C9D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -133,6 +135,7 @@
 				57AA84AC2091170200B9A1A8 /* Assets.xcassets */,
 				57AA84AE2091170200B9A1A8 /* LaunchScreen.storyboard */,
 				57AA84B12091170200B9A1A8 /* Info.plist */,
+				48658982209730B40005E3DD /* Data.swift */,
 			);
 			path = bertha;
 			sourceTree = "<group>";
@@ -295,6 +298,7 @@
 				57AA84A62091170100B9A1A8 /* AppDelegate.swift in Sources */,
 				3F86ED392093870B00DA1AD2 /* UPCarouselFlowLayout.swift in Sources */,
 				576FBD4E20926512005E0C9D /* Concept.swift in Sources */,
+				48658983209730B40005E3DD /* Data.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
