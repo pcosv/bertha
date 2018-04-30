@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Data Source-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="bertha" customModuleProvider="target" sceneMemberID="viewController">
@@ -42,12 +42,22 @@
                                     <action selector="showLearnedConcepts:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1Zw-Zi-Y0e"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gey-Bb-2Ak" customClass="iCarousel">
+                                <rect key="frame" x="0.0" y="139" width="375" height="419"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="39s-F0-A1I"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="XJc-Z7-jfW"/>
+                                </connections>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="carouselView" destination="gey-Bb-2Ak" id="9nb-JY-xHP"/>
                         <outlet property="chooseButton" destination="TvF-d0-f2F" id="cSe-z0-uFz"/>
                         <outlet property="selosView" destination="bY9-dN-HCJ" id="tRj-0s-KNa"/>
                     </connections>

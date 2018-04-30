@@ -9,8 +9,9 @@
 import UIKit
 // Classe principal do aplicativo
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, iCarouselDelegate, iCarouselDataSource {
     
+    @IBOutlet weak var carouselView: iCarousel!
     // botão de escolher o desafio
     @IBOutlet weak var chooseButton: UIButton!
     // modal inferior com selos alcançados
@@ -22,10 +23,10 @@ class ViewController: UIViewController {
     
     var isOpen = false
     var starPressed = 0
+    var numbers = [Int]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         
         // configurações do botão de escolher desafio
         chooseButton.layer.cornerRadius = 10
@@ -35,12 +36,26 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    // função que diz a quantidade de cartas (no caso, desafios)
 
     
-    // função que atualiza as labels ao dar swipe na carta
-
+    func numberOfItems(in carousel: iCarousel) -> Int {
+        return numbers.count
+    }
+    
+    func carousel(_ carousel: iCarousel, viewForItemAt index: Int, reusing view: UIView?) -> UIView {
+        let tempView = UIView(frame: CGRect(x: 0, y: 0, width: 260, height: 400))
+        tempView.backgroundColor = #colorLiteral(red: 0.7647058824, green: 0.9294117647, blue: 0.9215686275, alpha: 1)
+        tempView.layer.cornerRadius = 10
+        
+        return tempView
+    }
+    
+    func carousel(_ carousel: iCarousel, valueFor option: iCarouselOption, withDefault value: CGFloat) -> CGFloat {
+        if option == iCarouselOption.spacing{
+            return value * 1.1
+        }
+        return value
+    }
     
     // função que chama pop up inferior com os selos já alcançados
     @IBAction func showLearnedConcepts(_ sender: UIButton) {
@@ -82,16 +97,8 @@ class ViewController: UIViewController {
         super.awakeFromNib()
         // Initialization code
         
-//        DispatchQueue.main.async {
-//            self.viewCard.layer.cornerRadius = 10
-//            self.viewCard.layer.shadowColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
-//            self.viewCard.layer.opacity = 10.0
-//            self.viewCard.layer.shadowOffset = .zero
-//            self.viewCard.layer.shadowPath = UIBezierPath(rect: self.viewCard.bounds).cgPath
-//            self.viewCard.layer.shouldRasterize = true
-//            
-//            
-//        }
+        super.awakeFromNib()
+        numbers = [1, 2, 3, 4, 5]
     }
 
     

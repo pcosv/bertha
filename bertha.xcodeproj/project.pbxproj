@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		38B0F51A2097C1FF002172F8 /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B0F5182097C1FF002172F8 /* iCarousel.m */; };
 		48658983209730B40005E3DD /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48658982209730B40005E3DD /* Data.swift */; };
 		57038B6620911B04003051CE /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57038B6520911B04003051CE /* Challenge.swift */; };
 		576FBD4E20926512005E0C9D /* Concept.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576FBD4D20926512005E0C9D /* Concept.swift */; };
@@ -39,6 +40,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		38B0F5182097C1FF002172F8 /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarousel.m; sourceTree = "<group>"; };
+		38B0F5192097C1FF002172F8 /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
+		38B0F51B2097C248002172F8 /* bertha-bridgingheader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "bertha-bridgingheader.h"; sourceTree = "<group>"; };
 		48658982209730B40005E3DD /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		57038B6520911B04003051CE /* Challenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
 		576FBD4D20926512005E0C9D /* Concept.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Concept.swift; sourceTree = "<group>"; };
@@ -118,7 +122,10 @@
 			isa = PBXGroup;
 			children = (
 				DE24B36620925C4E0065DF1C /* bertha.xcdatamodeld */,
+				38B0F5192097C1FF002172F8 /* iCarousel.h */,
+				38B0F5182097C1FF002172F8 /* iCarousel.m */,
 				57AA84A52091170100B9A1A8 /* AppDelegate.swift */,
+				38B0F51B2097C248002172F8 /* bertha-bridgingheader.h */,
 				57AA84A72091170100B9A1A8 /* ViewController.swift */,
 				576FBD4D20926512005E0C9D /* Concept.swift */,
 				57038B6520911B04003051CE /* Challenge.swift */,
@@ -286,6 +293,7 @@
 				57AA84A82091170100B9A1A8 /* ViewController.swift in Sources */,
 				57AA84A62091170100B9A1A8 /* AppDelegate.swift in Sources */,
 				576FBD4E20926512005E0C9D /* Concept.swift in Sources */,
+				38B0F51A2097C1FF002172F8 /* iCarousel.m in Sources */,
 				48658983209730B40005E3DD /* Data.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -469,7 +477,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ufpe.br.bertha;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "bertha/bertha-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "bertha/bertha-bridgingheader.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -490,7 +498,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ufpe.br.bertha;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "bertha/bertha-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "bertha/bertha-bridgingheader.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
