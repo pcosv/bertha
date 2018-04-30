@@ -16,22 +16,23 @@ public class Challenge : NSManagedObject {
     @NSManaged var image:NSData
     @NSManaged var concept:Concept
     
-    init(description:String, media:String, image: UIImage, concept:Concept, context: NSManagedObjectContext) {
+    convenience init(description:String, media:String, image: UIImage, concept:Concept, context: NSManagedObjectContext) {
         let entity = NSEntityDescription.entity(forEntityName: "Challenge", in: context)
-        super.init(entity: entity!, insertInto: context)
+        self.init(entity: entity!, insertInto: context)
         self.challenge = description
         self.media = media
         self.image = (UIImagePNGRepresentation(image) as NSData?)!
         self.concept = concept
     }
     
-    init(description: String, media: String, censura: Int, image: UIImage, concept: Concept, context: NSManagedObjectContext) {
+    convenience init(description: String, media: String, censura: Int, image: UIImage, concept: Concept, context: NSManagedObjectContext) {
         let entity = NSEntityDescription.entity(forEntityName: "Challenge", in: context)
-        super.init(entity: entity!, insertInto: context)
+        self.init(entity: entity!, insertInto: context)
         self.challenge = description
         self.media = media
         self.censura = censura
         self.image = (UIImagePNGRepresentation(image) as NSData?)!
         self.concept = concept
     }
+
 }

@@ -13,11 +13,13 @@ class Concept : NSManagedObject {
     @NSManaged var title:String
     @NSManaged var concept:String
     @NSManaged var challenge: Challenge
+    @NSManaged var done: Bool
     
-    init(title: String, description: String, context: NSManagedObjectContext) {
+    convenience init(title: String, description: String, context: NSManagedObjectContext) {
         let entity = NSEntityDescription.entity(forEntityName: "Concept", in: context)
-        super.init(entity: entity!, insertInto: context)
+        self.init(entity: entity!, insertInto: context)
         self.title = title
         self.concept = description
+        self.done = false
     }
 }
