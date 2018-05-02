@@ -28,6 +28,13 @@ class ViewController: UIViewController, iCarouselDelegate, iCarouselDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // view de selos
+        selosView.frame = CGRect(x: 0, y: view.frame.maxY, width: view.frame.width, height: view.frame.height/3)
+        selosView.layer.cornerRadius = 15
+        selosView.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
+        
+        self.view.addSubview(selosView)
+        
         // configurações do botão de escolher desafio
         chooseButton.layer.cornerRadius = 10
     }
@@ -48,15 +55,21 @@ class ViewController: UIViewController, iCarouselDelegate, iCarouselDataSource {
     @IBAction func showLearnedConcepts(_ sender: UIButton) {
         
         if starPressed == 0{
-            selosView.isHidden = false
             starPressed = 1
-            // calcular largura do modal em função do tamanho da tela
-            selosView.frame = CGRect(x: 0, y: 435, width: 375, height: 260)
-            selosView.layer.cornerRadius = 25
-            self.view.addSubview(selosView)
-        } else{
+            
+            // subir
+            UIView.animate(withDuration: 0.3, animations: {
+                self.selosView.frame.origin = CGPoint(x: 0, y: 2*self.view.frame.height/3)
+            })
+            
+        }
+        else {
             starPressed = 0
-            selosView.isHidden = true
+            
+            // descer
+            UIView.animate(withDuration: 0.3, animations: {
+                self.selosView.frame.origin = CGPoint(x: 0, y: self.view.frame.maxY)
+            })
         }
  
     }
