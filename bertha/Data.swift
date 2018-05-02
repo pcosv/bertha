@@ -70,8 +70,10 @@ class Data {
     func setRelationships(){
         for concept in concepts {
             for challenge in challenges {
-                concept.challenge = challenge
-                challenge.concept = concept
+                if concepts.index(of: concept) == challenges.index(of: challenge) {
+                    concept.challenge = challenge
+                    challenge.concept = concept
+                }
             }
         }
     }
