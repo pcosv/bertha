@@ -15,7 +15,11 @@ class Data {
     var context: NSManagedObjectContext
     var concepts: [Concept]
     var challenges: [Challenge]
+    
+    //Badges - concepts already done
     var badges: [Concept]
+    
+    //Cards - concepts to be done
     var cards: [Concept]
 
     init(context: NSManagedObjectContext) {

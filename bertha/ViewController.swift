@@ -23,7 +23,6 @@ class ViewController: UIViewController, iCarouselDelegate, iCarouselDataSource {
     
     var isOpen = false
     var starPressed = 0
-    var numbers = [Int]()
     var data = Data(context: (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext)
     
     override func viewDidLoad() {
@@ -43,23 +42,6 @@ class ViewController: UIViewController, iCarouselDelegate, iCarouselDataSource {
         //return numbers.count
         data.updateCards()
         return data.cards.count
-    }
-    
-    func carousel(_ carousel: iCarousel, viewForItemAt index: Int, reusing view: UIView?) -> UIView {
-        let tempView = UIView(frame: CGRect(x: 0, y: 0, width: 260, height: 400))
-        tempView.backgroundColor = #colorLiteral(red: 0.7647058824, green: 0.9294117647, blue: 0.9215686275, alpha: 1)
-        tempView.layer.cornerRadius = 10
-        
-        // parei aqui criando as labels do card e o botão de virar a carta
-        
-        return tempView
-    }
-    
-    func carousel(_ carousel: iCarousel, valueFor option: iCarouselOption, withDefault value: CGFloat) -> CGFloat {
-        if option == iCarouselOption.spacing{
-            return value * 1.1
-        }
-        return value
     }
     
     // função que chama pop up inferior com os selos já alcançados
@@ -103,7 +85,6 @@ class ViewController: UIViewController, iCarouselDelegate, iCarouselDataSource {
         // Initialization code
         
         super.awakeFromNib()
-        numbers = [1, 2, 3, 4, 5]
     }
 
     
