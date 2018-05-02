@@ -15,14 +15,18 @@ class Data {
     var context: NSManagedObjectContext
     var concepts: [Concept]
     var challenges: [Challenge]
+    var badges: [Concept]
+    var cards: [Concept]
 
     init(context: NSManagedObjectContext) {
         self.context = context
+        self.badges = [Concept]()
+        self.cards = [Concept]()
 
         // checa se tem algo no banco
         // se tiver, carrega concepts e challenges do banco.
-        let challenges = try! context.fetch(NSFetchRequest(entityName: "Challenge")) as! [Challenge]
-        let concepts = try! context.fetch(NSFetchRequest(entityName: "Concept")) as! [Concept]
+        self.challenges = try! context.fetch(NSFetchRequest(entityName: "Challenge")) as! [Challenge]
+        self.concepts = try! context.fetch(NSFetchRequest(entityName: "Concept")) as! [Concept]
         
         if (challenges.count != 10 && concepts.count != 10) {
             self.concepts = [
@@ -51,11 +55,12 @@ class Data {
                 Challenge(description: "Assista Tempos Modernos, filme que mostra a rotina de um operário numa linha de montagem e suas dificuldades.", media: "https://www.youtube.com/watch?v=FNv7M-UPNuY", censura: 0, image: #imageLiteral(resourceName: "industry"), concept: concepts[9], context: context)
         
             ]
+            badges = [Concept]()
+            cards = concepts
             setRelationships()
             (UIApplication.shared.delegate as! AppDelegate).saveContext()
         } else {
-            self.concepts = concepts
-            self.challenges = challenges
+            updateCards()
         }
     }
     
@@ -68,13 +73,13 @@ class Data {
         }
     }
     
-    func getDoneConcepts() -> [Concept] {
-        var badges = [Concept]()
+    func updateCards() {
         for concept in concepts {
             if concept.done {
-                badges.append(concept)
+                self.badges.append(concept)
+            } else {
+                self.cards.append(concept)
             }
         }
-        return badges
     }
 }
