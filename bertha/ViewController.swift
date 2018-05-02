@@ -10,18 +10,18 @@ import UIKit
 // Classe principal do aplicativo
 
 class ViewController: UIViewController, iCarouselDelegate, iCarouselDataSource {
-    
+    // carousel
     @IBOutlet weak var carouselView: iCarousel!
+    
     // botão de escolher o desafio
     @IBOutlet weak var chooseButton: UIButton!
+    
     // modal inferior com selos alcançados
     @IBOutlet weak var selosView: UIView!
-    // elementos da célula
-    @IBOutlet weak var viewCard: UIView!
-    @IBOutlet weak var conceptTitle: UILabel!
-    @IBOutlet weak var conceptBody: UILabel!
     
-    var isOpen = false
+    // elementos da célula
+    
+    var isOpen = true
     var starPressed = 0
     var data = Data(context: (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext)
     
@@ -72,25 +72,6 @@ class ViewController: UIViewController, iCarouselDelegate, iCarouselDataSource {
             })
         }
  
-    }
-    
-    // essa função deve receber o desafio atual e mudar as labels de acordo com o flip
-    @IBAction func flipCell(_ sender: Any) {
-        if isOpen {
-            isOpen = false
-            
-            // animação de flip
-            UIView.transition(with: viewCard, duration: 0.8, options: .transitionFlipFromLeft, animations: nil, completion: nil)
-            
-            // atualização de label
-            conceptTitle.text = "Titulo do conceito"
-        }
-        else {
-            isOpen = true
-            UIView.transition(with: viewCard, duration: 0.8, options: .transitionFlipFromLeft, animations: nil, completion: nil)
-            
-            conceptTitle.text = "Titulo do desafio"
-        }
     }
     
     override func awakeFromNib() {
