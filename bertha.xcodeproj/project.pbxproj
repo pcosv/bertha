@@ -20,6 +20,7 @@
 		57AA84BB2091170200B9A1A8 /* berthaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AA84BA2091170200B9A1A8 /* berthaTests.swift */; };
 		57AA84C62091170200B9A1A8 /* berthaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AA84C52091170200B9A1A8 /* berthaUITests.swift */; };
 		DE24B36820925C4E0065DF1C /* bertha.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DE24B36620925C4E0065DF1C /* bertha.xcdatamodeld */; };
+		DEAC756C209A2AD3006B9D3A /* ViewController+Carousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAC756B209A2AD3006B9D3A /* ViewController+Carousel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		57AA84C52091170200B9A1A8 /* berthaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = berthaUITests.swift; sourceTree = "<group>"; };
 		57AA84C72091170200B9A1A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE24B36720925C4E0065DF1C /* bertha.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = bertha.xcdatamodel; sourceTree = "<group>"; };
+		DEAC756B209A2AD3006B9D3A /* ViewController+Carousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Carousel.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 				57AA84A52091170100B9A1A8 /* AppDelegate.swift */,
 				38B0F51B2097C248002172F8 /* bertha-bridgingheader.h */,
 				57AA84A72091170100B9A1A8 /* ViewController.swift */,
+				DEAC756B209A2AD3006B9D3A /* ViewController+Carousel.swift */,
 				576FBD4D20926512005E0C9D /* Concept.swift */,
 				57038B6520911B04003051CE /* Challenge.swift */,
 				57AA84A92091170100B9A1A8 /* Main.storyboard */,
@@ -288,6 +291,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEAC756C209A2AD3006B9D3A /* ViewController+Carousel.swift in Sources */,
 				57038B6620911B04003051CE /* Challenge.swift in Sources */,
 				DE24B36820925C4E0065DF1C /* bertha.xcdatamodeld in Sources */,
 				57AA84A82091170100B9A1A8 /* ViewController.swift in Sources */,
