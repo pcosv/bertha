@@ -53,7 +53,7 @@ extension ViewController {
     }
     
     
-    
+    //PAREI AQUI FAZENDO O FLIP DA CARTA
     // essa função deve receber o desafio atual e mudar as labels de acordo com o flip
     @objc func flipCell(_ sender: Any) {
         
