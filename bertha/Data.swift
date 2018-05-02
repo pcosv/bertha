@@ -55,7 +55,6 @@ class Data {
                 Challenge(description: "Assista Tempos Modernos, filme que mostra a rotina de um operário numa linha de montagem e suas dificuldades.", media: "https://www.youtube.com/watch?v=FNv7M-UPNuY", censura: 0, image: #imageLiteral(resourceName: "industry"), concept: concepts[9], context: context)
         
             ]
-            badges = [Concept]()
             cards = concepts
             setRelationships()
             (UIApplication.shared.delegate as! AppDelegate).saveContext()
@@ -74,6 +73,8 @@ class Data {
     }
     
     func updateCards() {
+        self.badges = [Concept]()
+        self.cards = [Concept]()
         for concept in concepts {
             if concept.done {
                 self.badges.append(concept)
@@ -81,5 +82,10 @@ class Data {
                 self.cards.append(concept)
             }
         }
+    }
+  
+    func getNumCards() -> Int {
+        updateCards()
+        return cards.count
     }
 }

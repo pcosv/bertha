@@ -24,6 +24,7 @@ class ViewController: UIViewController, iCarouselDelegate, iCarouselDataSource {
     var isOpen = false
     var starPressed = 0
     var numbers = [Int]()
+    var data = Data(context: (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,7 +40,9 @@ class ViewController: UIViewController, iCarouselDelegate, iCarouselDataSource {
 
     
     func numberOfItems(in carousel: iCarousel) -> Int {
-        return numbers.count
+        //return numbers.count
+        data.updateCards()
+        return data.cards.count
     }
     
     func carousel(_ carousel: iCarousel, viewForItemAt index: Int, reusing view: UIView?) -> UIView {
