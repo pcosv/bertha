@@ -45,7 +45,7 @@ extension ViewController {
         let buttonTurnCard = NewUIButton(frame: CGRect(x: 235, y: 15, width: 35, height: 35))
         buttonTurnCard.setImage(UIImage(named: "turn-left.png"), for: .normal)
         buttonTurnCard.addTarget(self, action: #selector(flipCell), for: .touchUpInside)
-        
+        buttonTurnCard.view = front
         
 
         front.addSubview(buttonTurnCard)
@@ -56,27 +56,30 @@ extension ViewController {
     }
     
     // essa função deve receber o desafio atual e mudar as labels de acordo com o flip
-    @objc func flipCell(_ sender: Any) {
-//        var back = sender as! CardUIView
-//
-//        if isOpen {
-//            isOpen = false
-//            // animação de flip
-//            UIView.transition(with: carouselView.currentItemView!, duration: 0.8, options: .transitionFlipFromLeft, animations: nil, completion: nil)
-//            print("flip")
-//            back.challengeTitle!.text = "Desafio"
+    @objc func flipCell(_ sender: NewUIButton) {
+        var back = sender.view
+
+        if isOpen {
+            isOpen = false
+            // animação de flip
+            // CardUIView.transition(with: carouselView.currentItemView!, duration: 0.8, options: .transitionFlipFromLeft, animations: nil, completion: nil)
+            
+            CardUIView.transition(from: carouselView.currentItemView!, to: back!, duration: 0.8, options: .transitionFlipFromLeft, completion: nil)
+            
+            //print(carouselView.currentItemView!)
+            back?.conceptTitle?.text = "Desafio"
 //            back.frame = CGRect(x: 15, y: 20, width: 250, height: 50)
-//            back.challengeTitle!.font = UIFont.boldSystemFont(ofSize: CGFloat(20.0))
-//            back.challengeTitle!.textColor = #colorLiteral(red: 0.5176470588, green: 0.2470588235, blue: 0.8274509804, alpha: 1)
-//            back.challengeTitle!.numberOfLines = 0
-//
-//            carouselView.currentItemView?.addSubview(back)
-//            //tempView.challengeBody?.text = concepts[getIndexCurrentCard()].challenge.challenge
-//        }
-//        else {
-//            isOpen = true
-//            UIView.transition(with: carouselView.currentItemView!, duration: 0.8, options: .transitionFlipFromLeft, animations: nil, completion: nil)
-//
-//        }
+//            back.conceptTitle?.font = UIFont.boldSystemFont(ofSize: CGFloat(20.0))
+//            back.conceptTitle?.textColor = #colorLiteral(red: 0.5176470588, green: 0.2470588235, blue: 0.8274509804, alpha: 1)
+//            back.conceptTitle?.numberOfLines = 0
+
+            self.view.addSubview(back!)
+            //tempView.challengeBody?.text = concepts[getIndexCurrentCard()].challenge.challenge
+        }
+        else {
+            isOpen = true
+            UIView.transition(with: carouselView.currentItemView!, duration: 0.8, options: .transitionFlipFromLeft, animations: nil, completion: nil)
+
+        }
     }
 }

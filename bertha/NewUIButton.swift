@@ -9,5 +9,5 @@
 import Foundation
 
 class NewUIButton: UIButton {
-    var view: UIView!
+    var view: CardUIView!
 }
