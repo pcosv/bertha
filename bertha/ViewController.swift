@@ -25,6 +25,14 @@ class ViewController: UIViewController, iCarouselDelegate, iCarouselDataSource {
     // modal inferior com selos alcançados
     @IBOutlet weak var selosView: UIView!
   
+    // modal de parabéns quando o usuário conclui um desafio
+    @IBOutlet weak var congratsView: UIView!
+    
+    // botão ok do modal de parabéns
+    @IBOutlet weak var congratsButton: UIButton!
+    
+    @IBOutlet weak var blurView: UIVisualEffectView!
+    
     @IBOutlet weak var badgesCollectionView: UICollectionView!
   
     var challenges = [Challenge]()
@@ -45,6 +53,8 @@ class ViewController: UIViewController, iCarouselDelegate, iCarouselDataSource {
         //teste de animaçao
         //toBadge()
         
+        blurView.isHidden = true
+        
         // view de selos
         selosView.frame = CGRect(x: 0, y: view.frame.maxY, width: view.frame.width, height: view.frame.height/3)
         selosView.layer.cornerRadius = 15
@@ -57,17 +67,23 @@ class ViewController: UIViewController, iCarouselDelegate, iCarouselDataSource {
         badgesCollectionView.delegate = self
       
         selosView.addSubview(badgesCollectionView)
-        self.view.addSubview(selosView)
+
         
         // configurações do botão de escolher desafio
         chooseButton.layer.cornerRadius = 10
+        
+        congratsView.frame = CGRect(x: view.frame.midX - 150, y: view.frame.midY - 90, width: 300, height: 180)
+        congratsView.layer.cornerRadius = 10
+        congratsButton.addTarget(self, action: #selector(toBadge), for: .touchUpInside)
+        congratsButton.layer.cornerRadius = 10
+        
+        self.view.addSubview(selosView)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
     
     func numberOfItems(in carousel: iCarousel) -> Int {
         //return numbers.count

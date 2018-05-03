@@ -11,12 +11,17 @@ import Foundation
 extension ViewController {
   @IBAction func chooseChallenge(_ sender: Any) {
     if challengeChosen {
+        
+        self.view.addSubview(congratsView)
+        blurView.isHidden = false
+        chooseButton.setTitle("quero este!", for: UIControlState.normal)
+
         //Animação
       
         challengeChosen = false
     } else {
         labelApresentacao.text = "este é seu desafio atual"
-        chooseButton.titleLabel?.text = "Concluir"
+        chooseButton.setTitle("concluir", for: UIControlState.normal)
       
         challengeChosen = true
     }

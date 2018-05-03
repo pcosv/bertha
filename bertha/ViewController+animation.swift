@@ -9,7 +9,9 @@
 import Foundation
 
 extension ViewController {
-    func toBadge(){
+    @objc func toBadge(){
+        
+        blurView.isHidden = true
         let path = UIBezierPath()
         
         let imageTest = UIImage(named: "coldwar.png")
