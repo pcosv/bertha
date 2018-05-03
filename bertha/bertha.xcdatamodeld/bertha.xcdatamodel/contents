@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14133" systemVersion="17E202" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14133" systemVersion="17D47" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Challenge" representedClassName=".Challenge" syncable="YES">
         <attribute name="censura" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="challenge" optional="YES" attributeType="String" syncable="YES"/>
@@ -10,6 +10,7 @@
     </entity>
     <entity name="Concept" representedClassName=".Concept" syncable="YES">
         <attribute name="concept" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="doing" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="done" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
@@ -17,6 +18,6 @@
     </entity>
     <elements>
         <element name="Challenge" positionX="-18" positionY="27" width="128" height="135"/>
-        <element name="Concept" positionX="250" positionY="63" width="128" height="120"/>
+        <element name="Concept" positionX="250" positionY="63" width="128" height="135"/>
     </elements>
 </model>

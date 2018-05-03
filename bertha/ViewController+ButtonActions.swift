@@ -15,11 +15,12 @@ extension ViewController {
         self.view.addSubview(congratsView)
         blurView.isHidden = false
         chooseButton.setTitle("quero este!", for: UIControlState.normal)
-
+      
         //Animação
       
         challengeChosen = false
     } else {
+        data.cards[currentIndex].doing = true
         labelApresentacao.text = "este é seu desafio atual"
         chooseButton.setTitle("concluir", for: UIControlState.normal)
       

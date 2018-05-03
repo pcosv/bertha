@@ -13,6 +13,7 @@ class Concept : NSManagedObject {
     @NSManaged var title:String
     @NSManaged var concept:String
     @NSManaged var challenge: Challenge
+    @NSManaged var doing: Bool
     @NSManaged var done: Bool
     
     convenience init(title: String, description: String, context: NSManagedObjectContext) {
@@ -21,5 +22,6 @@ class Concept : NSManagedObject {
         self.title = title
         self.concept = description
         self.done = false
+        self.doing = false
     }
 }
