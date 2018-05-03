@@ -10,6 +10,7 @@ import UIKit
 // Classe principal do aplicativo
 
 class ViewController: UIViewController, iCarouselDelegate, iCarouselDataSource {
+    
     // carousel
     @IBOutlet weak var carouselView: iCarousel!
     
@@ -19,6 +20,10 @@ class ViewController: UIViewController, iCarouselDelegate, iCarouselDataSource {
     // modal inferior com selos alcançados
     @IBOutlet weak var selosView: UIView!
     
+    var challenges = [Challenge]()
+    var concepts = [Concept]()
+
+    
     // elementos da célula
     
     var isOpen = true
@@ -27,7 +32,8 @@ class ViewController: UIViewController, iCarouselDelegate, iCarouselDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        data.updateCards()
+        concepts = data.cards
         // view de selos
         selosView.frame = CGRect(x: 0, y: view.frame.maxY, width: view.frame.width, height: view.frame.height/3)
         selosView.layer.cornerRadius = 15

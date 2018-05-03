@@ -20,6 +20,7 @@
 		57AA84B02091170200B9A1A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57AA84AE2091170200B9A1A8 /* LaunchScreen.storyboard */; };
 		57AA84BB2091170200B9A1A8 /* berthaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AA84BA2091170200B9A1A8 /* berthaTests.swift */; };
 		57AA84C62091170200B9A1A8 /* berthaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AA84C52091170200B9A1A8 /* berthaUITests.swift */; };
+		57E1CD58209A91D000FE23D3 /* CardUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E1CD57209A91D000FE23D3 /* CardUIView.swift */; };
 		DE24B36820925C4E0065DF1C /* bertha.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DE24B36620925C4E0065DF1C /* bertha.xcdatamodeld */; };
 		DEAC756C209A2AD3006B9D3A /* ViewController+Carousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAC756B209A2AD3006B9D3A /* ViewController+Carousel.swift */; };
 /* End PBXBuildFile section */
@@ -63,6 +64,7 @@
 		57AA84C12091170200B9A1A8 /* berthaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = berthaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		57AA84C52091170200B9A1A8 /* berthaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = berthaUITests.swift; sourceTree = "<group>"; };
 		57AA84C72091170200B9A1A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		57E1CD57209A91D000FE23D3 /* CardUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardUIView.swift; sourceTree = "<group>"; };
 		DE24B36720925C4E0065DF1C /* bertha.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = bertha.xcdatamodel; sourceTree = "<group>"; };
 		DEAC756B209A2AD3006B9D3A /* ViewController+Carousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Carousel.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -131,6 +133,7 @@
 				57AA84A52091170100B9A1A8 /* AppDelegate.swift */,
 				38B0F51B2097C248002172F8 /* bertha-bridgingheader.h */,
 				57AA84A72091170100B9A1A8 /* ViewController.swift */,
+				57E1CD57209A91D000FE23D3 /* CardUIView.swift */,
 				DEAC756B209A2AD3006B9D3A /* ViewController+Carousel.swift */,
 				3F707049209A39050010631E /* ViewController+animation.swift */,
 				576FBD4D20926512005E0C9D /* Concept.swift */,
@@ -302,6 +305,7 @@
 				57AA84A62091170100B9A1A8 /* AppDelegate.swift in Sources */,
 				576FBD4E20926512005E0C9D /* Concept.swift in Sources */,
 				38B0F51A2097C1FF002172F8 /* iCarousel.m in Sources */,
+				57E1CD58209A91D000FE23D3 /* CardUIView.swift in Sources */,
 				48658983209730B40005E3DD /* Data.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
