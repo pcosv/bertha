@@ -37,6 +37,9 @@ class ViewController: UIViewController, iCarouselDelegate, iCarouselDataSource {
         data.updateCards()
         concepts = data.cards
       
+        //teste de animaçao
+        //toBadge()
+        
         // view de selos
         selosView.frame = CGRect(x: 0, y: view.frame.maxY, width: view.frame.width, height: view.frame.height/3)
         selosView.layer.cornerRadius = 15
