@@ -11,8 +11,6 @@ import UIKit
 
 class ViewController: UIViewController, iCarouselDelegate, iCarouselDataSource {
     
-    var cardsIndex:[Int] = []
-    
     // carousel
     @IBOutlet weak var carouselView: iCarousel!
   
@@ -41,7 +39,6 @@ class ViewController: UIViewController, iCarouselDelegate, iCarouselDataSource {
     
     // elementos da célula
     
-    var isOpen = true
     var starPressed = 0
     var data = Data(context: (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext)
     

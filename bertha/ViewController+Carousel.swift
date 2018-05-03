@@ -63,8 +63,8 @@ extension ViewController {
         back?.title?.isHidden = true
         back?.body?.isHidden = true
 
-        if isOpen {
-            isOpen = false
+        if (back?.isOpen)! {
+            back?.isOpen = false
             // animação de flip
             CardUIView.transition(with: back!, duration: 0.8, options: .transitionFlipFromLeft, animations: nil, completion: nil)
 
@@ -86,7 +86,7 @@ extension ViewController {
             back?.addSubview(body)
         }
         else {
-            isOpen = true
+            back?.isOpen = true
             UIView.transition(with: carouselView.currentItemView!, duration: 0.8, options: .transitionFlipFromLeft, animations: nil, completion: nil)
 
             // title

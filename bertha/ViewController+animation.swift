@@ -19,6 +19,8 @@ extension ViewController {
             self.selosView.frame.origin = CGPoint(x: 0, y: 2*self.view.frame.height/3)
         })
         
+             view.addSubview(selosView)
+        
         let path = UIBezierPath()
         
         let imageTest = UIImage(named: "coldwar.png")
@@ -36,8 +38,8 @@ extension ViewController {
         
         view.addSubview(imageView)
         
-        UIView.animate(withDuration: 0.3, animations: {
-            self.selosView.frame.origin = CGPoint(x: 0, y: self.view.frame.maxY)
-        })
+        //UIView.animate(withDuration: 0.3, animations: {
+        //    self.selosView.frame.origin = CGPoint(x: 0, y: self.view.frame.maxY)
+        //})
     }
 }
