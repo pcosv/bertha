@@ -22,9 +22,9 @@ extension ViewController {
     
     func carousel(_ carousel: iCarousel, viewForItemAt index: Int, reusing view: UIView?) -> UIView {
         
-        let tempView = CardUIView(frame: CGRect(x: 0, y: 0, width: 280, height: 420))
-        tempView.backgroundColor = #colorLiteral(red: 0.7647058824, green: 0.9294117647, blue: 0.9215686275, alpha: 1)
-        tempView.layer.cornerRadius = 10
+        let front = CardUIView(frame: CGRect(x: 0, y: 0, width: 280, height: 420))
+        front.backgroundColor = #colorLiteral(red: 0.7647058824, green: 0.9294117647, blue: 0.9215686275, alpha: 1)
+        front.layer.cornerRadius = 10
 
         
         // concept title
@@ -42,27 +42,36 @@ extension ViewController {
         conceptBody.numberOfLines = 0
         
         // button turn card
-        let buttonTurnCard = UIButton(frame: CGRect(x: 235, y: 15, width: 35, height: 35))
+        let buttonTurnCard = NewUIButton(frame: CGRect(x: 235, y: 15, width: 35, height: 35))
         buttonTurnCard.setImage(UIImage(named: "turn-left.png"), for: .normal)
         buttonTurnCard.addTarget(self, action: #selector(flipCell), for: .touchUpInside)
         
-
-        tempView.addSubview(buttonTurnCard)
-        tempView.addSubview(conceptTitle)
-        tempView.addSubview(conceptBody)
         
-        return tempView
+
+        front.addSubview(buttonTurnCard)
+        front.addSubview(conceptTitle)
+        front.addSubview(conceptBody)
+        
+        return front
     }
     
     // essa função deve receber o desafio atual e mudar as labels de acordo com o flip
     @objc func flipCell(_ sender: Any) {
-//        let tempView = sender as! CardUIView
+//        var back = sender as! CardUIView
 //
 //        if isOpen {
 //            isOpen = false
 //            // animação de flip
 //            UIView.transition(with: carouselView.currentItemView!, duration: 0.8, options: .transitionFlipFromLeft, animations: nil, completion: nil)
-//            //tempView.challengeTitle?.text = challenges[getIndexCurrentCard()].challenge
+//            print("flip")
+//            back.challengeTitle!.text = "Desafio"
+//            back.frame = CGRect(x: 15, y: 20, width: 250, height: 50)
+//            back.challengeTitle!.font = UIFont.boldSystemFont(ofSize: CGFloat(20.0))
+//            back.challengeTitle!.textColor = #colorLiteral(red: 0.5176470588, green: 0.2470588235, blue: 0.8274509804, alpha: 1)
+//            back.challengeTitle!.numberOfLines = 0
+//
+//            carouselView.currentItemView?.addSubview(back)
+//            //tempView.challengeBody?.text = concepts[getIndexCurrentCard()].challenge.challenge
 //        }
 //        else {
 //            isOpen = true

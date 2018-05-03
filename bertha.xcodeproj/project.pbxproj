@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		381C6132209B670B00AC0192 /* NewUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381C6131209B670B00AC0192 /* NewUIButton.swift */; };
 		38B0F51A2097C1FF002172F8 /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B0F5182097C1FF002172F8 /* iCarousel.m */; };
 		3F70704A209A39050010631E /* ViewController+animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F707049209A39050010631E /* ViewController+animation.swift */; };
 		4803DB15209B312A00F0004C /* ViewController+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4803DB14209B312A00F0004C /* ViewController+CollectionView.swift */; };
@@ -45,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		381C6131209B670B00AC0192 /* NewUIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUIButton.swift; sourceTree = "<group>"; };
 		38B0F5182097C1FF002172F8 /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarousel.m; sourceTree = "<group>"; };
 		38B0F5192097C1FF002172F8 /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
 		38B0F51B2097C248002172F8 /* bertha-bridgingheader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "bertha-bridgingheader.h"; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 				38B0F51B2097C248002172F8 /* bertha-bridgingheader.h */,
 				57AA84A72091170100B9A1A8 /* ViewController.swift */,
 				57E1CD57209A91D000FE23D3 /* CardUIView.swift */,
+				381C6131209B670B00AC0192 /* NewUIButton.swift */,
 				DEAC756B209A2AD3006B9D3A /* ViewController+Carousel.swift */,
 				3F707049209A39050010631E /* ViewController+animation.swift */,
 				4803DB14209B312A00F0004C /* ViewController+CollectionView.swift */,
@@ -309,6 +312,7 @@
 				DE24B36820925C4E0065DF1C /* bertha.xcdatamodeld in Sources */,
 				57AA84A82091170100B9A1A8 /* ViewController.swift in Sources */,
 				57AA84A62091170100B9A1A8 /* AppDelegate.swift in Sources */,
+				381C6132209B670B00AC0192 /* NewUIButton.swift in Sources */,
 				4803DB15209B312A00F0004C /* ViewController+CollectionView.swift in Sources */,
 				576FBD4E20926512005E0C9D /* Concept.swift in Sources */,
 				38B0F51A2097C1FF002172F8 /* iCarousel.m in Sources */,
