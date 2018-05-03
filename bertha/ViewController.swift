@@ -13,7 +13,10 @@ class ViewController: UIViewController, iCarouselDelegate, iCarouselDataSource {
     
     // carousel
     @IBOutlet weak var carouselView: iCarousel!
-    
+  
+    //Label de apresentação do app
+    @IBOutlet weak var labelApresentacao: UILabel!
+  
     // botão de escolher o desafio
     @IBOutlet weak var chooseButton: UIButton!
     
@@ -24,7 +27,7 @@ class ViewController: UIViewController, iCarouselDelegate, iCarouselDataSource {
   
     var challenges = [Challenge]()
     var concepts = [Concept]()
-
+    var challengeChosen = false
     
     // elementos da célula
     

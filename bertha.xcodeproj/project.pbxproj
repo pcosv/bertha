@@ -12,6 +12,7 @@
 		3F70704A209A39050010631E /* ViewController+animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F707049209A39050010631E /* ViewController+animation.swift */; };
 		4803DB15209B312A00F0004C /* ViewController+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4803DB14209B312A00F0004C /* ViewController+CollectionView.swift */; };
 		4803DB19209B411A00F0004C /* BadgeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4803DB18209B411A00F0004C /* BadgeCollectionViewCell.swift */; };
+		48632154209B93F90047BD42 /* ViewController+ButtonActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48632153209B93F90047BD42 /* ViewController+ButtonActions.swift */; };
 		48658983209730B40005E3DD /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48658982209730B40005E3DD /* Data.swift */; };
 		57038B6620911B04003051CE /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57038B6520911B04003051CE /* Challenge.swift */; };
 		576FBD4E20926512005E0C9D /* Concept.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576FBD4D20926512005E0C9D /* Concept.swift */; };
@@ -53,6 +54,7 @@
 		3F707049209A39050010631E /* ViewController+animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+animation.swift"; sourceTree = "<group>"; };
 		4803DB14209B312A00F0004C /* ViewController+CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+CollectionView.swift"; sourceTree = "<group>"; };
 		4803DB18209B411A00F0004C /* BadgeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeCollectionViewCell.swift; sourceTree = "<group>"; };
+		48632153209B93F90047BD42 /* ViewController+ButtonActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+ButtonActions.swift"; sourceTree = "<group>"; };
 		48658982209730B40005E3DD /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		57038B6520911B04003051CE /* Challenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
 		576FBD4D20926512005E0C9D /* Concept.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Concept.swift; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 				57AA84B12091170200B9A1A8 /* Info.plist */,
 				48658982209730B40005E3DD /* Data.swift */,
 				4803DB18209B411A00F0004C /* BadgeCollectionViewCell.swift */,
+				48632153209B93F90047BD42 /* ViewController+ButtonActions.swift */,
 			);
 			path = bertha;
 			sourceTree = "<group>";
@@ -308,6 +311,7 @@
 			files = (
 				3F70704A209A39050010631E /* ViewController+animation.swift in Sources */,
 				DEAC756C209A2AD3006B9D3A /* ViewController+Carousel.swift in Sources */,
+				48632154209B93F90047BD42 /* ViewController+ButtonActions.swift in Sources */,
 				57038B6620911B04003051CE /* Challenge.swift in Sources */,
 				DE24B36820925C4E0065DF1C /* bertha.xcdatamodeld in Sources */,
 				57AA84A82091170100B9A1A8 /* ViewController.swift in Sources */,
