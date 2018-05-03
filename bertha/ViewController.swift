@@ -44,6 +44,7 @@ class ViewController: UIViewController, iCarouselDelegate, iCarouselDataSource {
       
         //Config badges view
         badgesCollectionView.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+        badgesCollectionView.layer.cornerRadius = 10
         badgesCollectionView.dataSource = self
         badgesCollectionView.delegate = self
       
