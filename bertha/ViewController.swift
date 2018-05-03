@@ -11,6 +11,8 @@ import UIKit
 
 class ViewController: UIViewController, iCarouselDelegate, iCarouselDataSource {
     
+    var cardsIndex:[Int] = []
+    
     // carousel
     @IBOutlet weak var carouselView: iCarousel!
     
