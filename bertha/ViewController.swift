@@ -19,7 +19,9 @@ class ViewController: UIViewController, iCarouselDelegate, iCarouselDataSource {
     
     // modal inferior com selos alcançados
     @IBOutlet weak var selosView: UIView!
-    
+  
+    @IBOutlet weak var badgesCollectionView: UICollectionView!
+  
     var challenges = [Challenge]()
     var concepts = [Concept]()
 
@@ -34,11 +36,18 @@ class ViewController: UIViewController, iCarouselDelegate, iCarouselDataSource {
         super.viewDidLoad()
         data.updateCards()
         concepts = data.cards
+      
         // view de selos
         selosView.frame = CGRect(x: 0, y: view.frame.maxY, width: view.frame.width, height: view.frame.height/3)
         selosView.layer.cornerRadius = 15
         selosView.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
-        
+      
+        //Config badges view
+        badgesCollectionView.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+        badgesCollectionView.dataSource = self
+        badgesCollectionView.delegate = self
+      
+        selosView.addSubview(badgesCollectionView)
         self.view.addSubview(selosView)
         
         // configurações do botão de escolher desafio
