@@ -49,9 +49,6 @@ class ViewController: UIViewController, iCarouselDelegate, iCarouselDataSource {
         super.viewDidLoad()
         data.updateCards()
         concepts = data.cards
-      
-        //teste de animaçao
-        //toBadge()
         
         blurView.isHidden = true
         
@@ -82,7 +79,7 @@ class ViewController: UIViewController, iCarouselDelegate, iCarouselDataSource {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
     }
     
     func numberOfItems(in carousel: iCarousel) -> Int {

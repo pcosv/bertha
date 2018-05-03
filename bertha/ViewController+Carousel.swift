@@ -28,7 +28,7 @@ extension ViewController {
         
         // concept title
         let title = UILabel(frame: CGRect(x: 15, y: 20, width: 250, height: 50))
-        title.text = self.concepts[/*carouselView.currentItemIndex*/index].title
+        title.text = self.concepts[index].title
         title.font = UIFont.boldSystemFont(ofSize: CGFloat(20.0))
         title.textColor = #colorLiteral(red: 0.5176470588, green: 0.2470588235, blue: 0.8274509804, alpha: 1)
         title.numberOfLines = 0
@@ -36,7 +36,7 @@ extension ViewController {
     
         // concept body
         let body = UILabel(frame: CGRect(x: 15, y: 70, width: 250, height: 250))
-        body.text = self.concepts[/*carouselView.currentItemIndex*/index].concept
+        body.text = self.concepts[index].concept
         body.font = UIFont.boldSystemFont(ofSize: CGFloat(15.0))
         body.textColor = #colorLiteral(red: 0.2352941176, green: 0.1921568627, blue: 0.3176470588, alpha: 1)
         body.numberOfLines = 0
@@ -48,8 +48,7 @@ extension ViewController {
         buttonTurnCard.addTarget(self, action: #selector(flipCell), for: .touchUpInside)
         buttonTurnCard.view = front
         
-        //carouselView.index(ofItemViewOrSubview: front)
-        print("indice da carta = ", /*carouselView.currentItemIndex*/index)
+        //print("indice da carta = ", index)
 
         front.addSubview(buttonTurnCard)
         front.addSubview(title)

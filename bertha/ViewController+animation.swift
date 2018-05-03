@@ -11,7 +11,14 @@ import Foundation
 extension ViewController {
     @objc func toBadge(){
         
+        // fechando popUp
         blurView.isHidden = true
+        congratsView.isHidden = true
+        
+        UIView.animate(withDuration: 0.3, animations: {
+            self.selosView.frame.origin = CGPoint(x: 0, y: 2*self.view.frame.height/3)
+        })
+        
         let path = UIBezierPath()
         
         let imageTest = UIImage(named: "coldwar.png")
@@ -28,5 +35,9 @@ extension ViewController {
         imageView.center = CGPoint(x: view.frame.maxX/3, y: view.frame.maxY - imageView.frame.height/2)
         
         view.addSubview(imageView)
+        
+        UIView.animate(withDuration: 0.3, animations: {
+            self.selosView.frame.origin = CGPoint(x: 0, y: self.view.frame.maxY)
+        })
     }
 }
