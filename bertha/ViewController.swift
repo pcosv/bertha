@@ -15,7 +15,10 @@ class ViewController: UIViewController, iCarouselDelegate, iCarouselDataSource {
     
     // carousel
     @IBOutlet weak var carouselView: iCarousel!
-    
+  
+    //Label de apresentação do app
+    @IBOutlet weak var labelApresentacao: UILabel!
+  
     // botão de escolher o desafio
     @IBOutlet weak var chooseButton: UIButton!
     
@@ -26,7 +29,7 @@ class ViewController: UIViewController, iCarouselDelegate, iCarouselDataSource {
   
     var challenges = [Challenge]()
     var concepts = [Concept]()
-
+    var challengeChosen = false
     
     // elementos da célula
     
@@ -39,6 +42,9 @@ class ViewController: UIViewController, iCarouselDelegate, iCarouselDataSource {
         data.updateCards()
         concepts = data.cards
       
+        //teste de animaçao
+        //toBadge()
+        
         // view de selos
         selosView.frame = CGRect(x: 0, y: view.frame.maxY, width: view.frame.width, height: view.frame.height/3)
         selosView.layer.cornerRadius = 15
@@ -46,6 +52,7 @@ class ViewController: UIViewController, iCarouselDelegate, iCarouselDataSource {
       
         //Config badges view
         badgesCollectionView.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+        badgesCollectionView.layer.cornerRadius = 10
         badgesCollectionView.dataSource = self
         badgesCollectionView.delegate = self
       
