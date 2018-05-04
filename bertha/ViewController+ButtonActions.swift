@@ -27,12 +27,34 @@ extension ViewController {
         challengeChosen = false
     } else {
         print(self.carouselView.currentItemIndex)
-        data.cards[self.carouselView.currentItemIndex].doing = true
+        giveUpButton.isHidden = false
+      data.cards[self.carouselView.currentItemIndex].doing = true
         //data.concepts[self.carouselView.currentItemIndex].doing = true
         labelApresentacao.text = "este é seu desafio atual"
         chooseButton.setTitle("concluir", for: UIControlState.normal)
       
         challengeChosen = true
     }
+  }
+  
+  @IBAction func openGiveUpView(_ sender: Any) {
+      giveUpView.isHidden = false
+      self.view.addSubview(giveUpView)
+      blurView.isHidden = false
+  }
+  
+  @IBAction func giveUp(_ sender: Any) {
+      data.cards[self.carouselView.currentItemIndex].doing = false
+      data.updateCards()
+    
+    
+      chooseButton.setTitle("quero este!", for: UIControlState.normal)
+      challengeChosen = false
+  }
+  
+  
+  @IBAction func didntGiveUp(_ sender: Any) {
+      giveUpView.isHidden = true
+      blurView.isHidden = true
   }
 }

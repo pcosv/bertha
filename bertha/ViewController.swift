@@ -22,6 +22,9 @@ class ViewController: UIViewController, iCarouselDelegate, iCarouselDataSource {
   
     // botão de escolher o desafio
     @IBOutlet weak var chooseButton: UIButton!
+  
+    //botão de desistir
+    @IBOutlet weak var giveUpButton: UIButton!
     
     // modal inferior com selos alcançados
     @IBOutlet weak var selosView: UIView!
@@ -53,6 +56,8 @@ class ViewController: UIViewController, iCarouselDelegate, iCarouselDataSource {
         
         blurView.isHidden = true
         giveUpView.isHidden = true
+        giveUpButton.isHidden = true
+      
         
         // view de selos
         selosView.frame = CGRect(x: 0, y: view.frame.maxY, width: view.frame.width, height: view.frame.height/3)

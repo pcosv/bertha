@@ -55,6 +55,16 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="XJc-Z7-jfW"/>
                                 </connections>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UmN-x8-KWz">
+                                <rect key="frame" x="16" y="592" width="94" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="desistir">
+                                    <color key="titleColor" red="0.23529411759999999" green="0.19215686269999999" blue="0.31764705879999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="openGiveUpView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jkh-ky-ggf"/>
+                                </connections>
+                            </button>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vx9-TG-jfW">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -81,6 +91,7 @@
                         <outlet property="chooseButton" destination="TvF-d0-f2F" id="cSe-z0-uFz"/>
                         <outlet property="congratsButton" destination="GrZ-hY-bke" id="fes-89-e2D"/>
                         <outlet property="congratsView" destination="VK5-2A-053" id="BQ5-ot-Lta"/>
+                        <outlet property="giveUpButton" destination="UmN-x8-KWz" id="nBb-pp-2EV"/>
                         <outlet property="giveUpView" destination="b78-mu-Ubd" id="HkO-QN-TDf"/>
                         <outlet property="labelApresentacao" destination="bWT-3O-C41" id="tmX-PQ-bUp"/>
                         <outlet property="selosView" destination="bY9-dN-HCJ" id="tRj-0s-KNa"/>
@@ -188,6 +199,9 @@
                             <state key="normal" title="Sim">
                                 <color key="titleColor" red="0.61176470589999998" green="0.1529411765" blue="0.8980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </state>
+                            <connections>
+                                <action selector="giveUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KQD-bd-lEb"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HAi-Ou-zaE">
                             <rect key="frame" x="49" y="102" width="70" height="39"/>
@@ -196,6 +210,9 @@
                             <state key="normal" title="Não">
                                 <color key="titleColor" red="0.61176470589999998" green="0.1529411765" blue="0.8980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </state>
+                            <connections>
+                                <action selector="didntGiveUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6R5-9T-ebY"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" red="0.61176470589999998" green="0.1529411765" blue="0.8980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

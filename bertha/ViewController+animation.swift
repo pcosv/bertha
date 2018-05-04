@@ -14,6 +14,7 @@ extension ViewController {
         // fechando popUp
         blurView.isHidden = true
         congratsView.isHidden = true
+        giveUpView.isHidden = true
         
         UIView.animate(withDuration: 0.3, animations: {
             self.selosView.frame.origin = CGPoint(x: 0, y: 2*self.view.frame.height/3)
