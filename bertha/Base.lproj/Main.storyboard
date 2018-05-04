@@ -55,7 +55,7 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="XJc-Z7-jfW"/>
                                 </connections>
                             </view>
-                            <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vx9-TG-jfW">
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vx9-TG-jfW">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" id="hBL-ON-l9D">
@@ -68,6 +68,11 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="vx9-TG-jfW"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="badgesCollectionView" destination="hJ0-d2-AUf" id="a9J-Ac-5d8"/>
@@ -76,6 +81,7 @@
                         <outlet property="chooseButton" destination="TvF-d0-f2F" id="cSe-z0-uFz"/>
                         <outlet property="congratsButton" destination="GrZ-hY-bke" id="fes-89-e2D"/>
                         <outlet property="congratsView" destination="VK5-2A-053" id="BQ5-ot-Lta"/>
+                        <outlet property="giveUpView" destination="b78-mu-Ubd" id="HkO-QN-TDf"/>
                         <outlet property="labelApresentacao" destination="bWT-3O-C41" id="tmX-PQ-bUp"/>
                         <outlet property="selosView" destination="bY9-dN-HCJ" id="tRj-0s-KNa"/>
                     </connections>
@@ -126,13 +132,13 @@
                                         <autoresizingMask key="autoresizingMask"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CLh-eu-SBn">
-                                                <rect key="frame" x="0.0" y="97" width="80" height="17"/>
+                                                <rect key="frame" x="0.0" y="96" width="80" height="17"/>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                                 <color key="textColor" red="0.23529411764705882" green="0.19215686274509802" blue="0.31764705882352939" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ktD-C2-hCW">
-                                                <rect key="frame" x="-20.5" y="0.0" width="121" height="93"/>
+                                                <rect key="frame" x="-20" y="0.0" width="120" height="92"/>
                                             </imageView>
                                         </subviews>
                                     </view>
@@ -163,6 +169,37 @@
                         <constraint firstItem="k7n-Tj-1tI" firstAttribute="trailing" secondItem="hJ0-d2-AUf" secondAttribute="trailing" constant="20" id="qUK-r9-rwU"/>
                     </constraints>
                     <viewLayoutGuide key="safeArea" id="k7n-Tj-1tI"/>
+                </view>
+                <view contentMode="scaleToFill" id="b78-mu-Ubd">
+                    <rect key="frame" x="0.0" y="0.0" width="300" height="179"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tem certeza que deseja desistir do desafio?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ee-Dy-d0x">
+                            <rect key="frame" x="4" y="11" width="292" height="83"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AiR-u5-ao2">
+                            <rect key="frame" x="180" y="102" width="72" height="39"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" red="0.76470588240000004" green="0.92941176469999998" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <state key="normal" title="Sim">
+                                <color key="titleColor" red="0.61176470589999998" green="0.1529411765" blue="0.8980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HAi-Ou-zaE">
+                            <rect key="frame" x="49" y="102" width="70" height="39"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" red="0.76470588240000004" green="0.92941176469999998" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <state key="normal" title="Não">
+                                <color key="titleColor" red="0.61176470589999998" green="0.1529411765" blue="0.8980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.61176470589999998" green="0.1529411765" blue="0.8980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <viewLayoutGuide key="safeArea" id="X7j-Qe-84R"/>
                 </view>
             </objects>
             <point key="canvasLocation" x="37.600000000000001" y="33.733133433283363"/>

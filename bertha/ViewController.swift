@@ -11,6 +11,9 @@ import UIKit
 
 class ViewController: UIViewController, iCarouselDelegate, iCarouselDataSource {
     
+    // popUp desistir
+    @IBOutlet var giveUpView: UIView!
+    
     // carousel
     @IBOutlet weak var carouselView: iCarousel!
   
@@ -49,6 +52,7 @@ class ViewController: UIViewController, iCarouselDelegate, iCarouselDataSource {
         //concepts = data.cards
         
         blurView.isHidden = true
+        giveUpView.isHidden = true
         
         // view de selos
         selosView.frame = CGRect(x: 0, y: view.frame.maxY, width: view.frame.width, height: view.frame.height/3)
@@ -72,6 +76,13 @@ class ViewController: UIViewController, iCarouselDelegate, iCarouselDataSource {
         congratsButton.addTarget(self, action: #selector(toBadge), for: .touchUpInside)
         congratsButton.layer.cornerRadius = 10
         
+        // view de desistir
+        giveUpView.frame = CGRect(x: view.frame.midX - 150, y: view.frame.midY - 90, width: 300, height: 180)
+        giveUpView.layer.cornerRadius = 10
+        //giveUpView.addTarget(self, action: #selector(toBadge), for: .touchUpInside)
+        giveUpView.layer.cornerRadius = 10
+        
+        self.view.addSubview(giveUpView)
         self.view.addSubview(selosView)
     }
 
