@@ -18,28 +18,42 @@ extension ViewController {
         UIView.animate(withDuration: 0.3, animations: {
             self.selosView.frame.origin = CGPoint(x: 0, y: 2*self.view.frame.height/3)
         })
+        starPressed = 1
         
-             view.addSubview(selosView)
+//        let path = UIBezierPath()
+//
+//        var conceptDoing:String = ""
+//
+//        for card in data.concepts {
+//            if card.done {
+//                print("fazendo -> ", card.title)
+//                conceptDoing = card.title
+//                break
+//            }
+//        }
         
-        let path = UIBezierPath()
-        
-        let imageTest = UIImage(named: "coldwar.png")
-        let imageView = UIImageView(image: imageTest)
+        /*let imageStr = conceptDoing + ".png"
+        let imageConcept = UIImage(named: imageStr)
+        let imageConceptView = UIImageView(image: imageConcept)
         
         path.move(to: CGPoint(x: view.frame.midX, y: view.frame.midY))
-        path.addQuadCurve(to: CGPoint(x: view.frame.maxX/3, y: view.frame.maxY - imageView.frame.height/2), controlPoint: CGPoint(x:view.frame.maxX/2, y: 0))
+        path.addQuadCurve(to: CGPoint(x: view.frame.maxX/3, y: view.frame.maxY - imageConceptView.frame.height/2), controlPoint: CGPoint(x:view.frame.maxX/2, y: 0))
         
         let animation = CAKeyframeAnimation(keyPath: "position")
         animation.path = path.cgPath
         animation.repeatCount = 0
         animation.duration = 2.0
-        imageView.layer.add(animation, forKey: "animate along path")
-        imageView.center = CGPoint(x: view.frame.maxX/3, y: view.frame.maxY - imageView.frame.height/2)
+        imageConceptView.layer.add(animation, forKey: "animate along path")
+        imageConceptView.center = CGPoint(x: view.frame.maxX/3, y: view.frame.maxY - imageConceptView.frame.height/2)
         
-        view.addSubview(imageView)
-        
+        view.addSubview(selosView)
+        view.addSubview(imageConceptView)
+        //selosView.addSubview(imageConceptView)
+        */
         //UIView.animate(withDuration: 0.3, animations: {
         //    self.selosView.frame.origin = CGPoint(x: 0, y: self.view.frame.maxY)
         //})
+        carouselView.reloadData()
+        badgesCollectionView.reloadData()
     }
 }

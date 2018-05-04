@@ -22,13 +22,16 @@ extension ViewController {
     
     func carousel(_ carousel: iCarousel, viewForItemAt index: Int, reusing view: UIView?) -> UIView {
         
+        //self.currentIndex = index
+        //data.updateCards()
+        
         let front = CardUIView(frame: CGRect(x: 0, y: 0, width: 280, height: 420))
         front.backgroundColor = #colorLiteral(red: 0.7647058824, green: 0.9294117647, blue: 0.9215686275, alpha: 1)
         front.layer.cornerRadius = 10
         
         // concept title
         let title = UILabel(frame: CGRect(x: 15, y: 20, width: 250, height: 50))
-        title.text = self.concepts[index].title
+        title.text = self.data.cards[index].title
         title.font = UIFont.boldSystemFont(ofSize: CGFloat(20.0))
         title.textColor = #colorLiteral(red: 0.5176470588, green: 0.2470588235, blue: 0.8274509804, alpha: 1)
         title.numberOfLines = 0
@@ -36,7 +39,7 @@ extension ViewController {
     
         // concept body
         let body = UILabel(frame: CGRect(x: 15, y: 70, width: 250, height: 250))
-        body.text = self.concepts[index].concept
+        body.text = self.data.cards[index].concept
         body.font = UIFont.boldSystemFont(ofSize: CGFloat(15.0))
         body.textColor = #colorLiteral(red: 0.2352941176, green: 0.1921568627, blue: 0.3176470588, alpha: 1)
         body.numberOfLines = 0
@@ -76,7 +79,7 @@ extension ViewController {
             back?.title = title
             
             let body = UILabel(frame: CGRect(x: 15, y: 70, width: 250, height: 250))
-            body.text = self.concepts[carouselView.currentItemIndex].challenge.challenge
+            body.text = self.data.cards[carouselView.currentItemIndex].challenge.challenge
             body.font = UIFont.boldSystemFont(ofSize: CGFloat(15.0))
             body.textColor = #colorLiteral(red: 0.2352941176, green: 0.1921568627, blue: 0.3176470588, alpha: 1)
             body.numberOfLines = 0
@@ -91,7 +94,7 @@ extension ViewController {
 
             // title
             let title = UILabel(frame: CGRect(x: 15, y: 20, width: 250, height: 50))
-            title.text = self.concepts[carouselView.currentItemIndex].title
+            title.text = self.data.cards[carouselView.currentItemIndex].title
             title.font = UIFont.boldSystemFont(ofSize: CGFloat(20.0))
             title.textColor = #colorLiteral(red: 0.5176470588, green: 0.2470588235, blue: 0.8274509804, alpha: 1)
             title.numberOfLines = 0
@@ -99,7 +102,7 @@ extension ViewController {
             
             // body
             let body = UILabel(frame: CGRect(x: 15, y: 70, width: 250, height: 250))
-            body.text = self.concepts[carouselView.currentItemIndex].concept
+            body.text = self.data.cards[carouselView.currentItemIndex].concept
             body.font = UIFont.boldSystemFont(ofSize: CGFloat(15.0))
             body.textColor = #colorLiteral(red: 0.2352941176, green: 0.1921568627, blue: 0.3176470588, alpha: 1)
             body.numberOfLines = 0

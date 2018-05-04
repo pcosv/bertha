@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -54,7 +55,7 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="XJc-Z7-jfW"/>
                                 </connections>
                             </view>
-                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vx9-TG-jfW">
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vx9-TG-jfW">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" id="hBL-ON-l9D">
@@ -67,11 +68,6 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="vx9-TG-jfW"/>
-                            </mask>
-                        </variation>
                     </view>
                     <connections>
                         <outlet property="badgesCollectionView" destination="hJ0-d2-AUf" id="a9J-Ac-5d8"/>
@@ -113,37 +109,44 @@
                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="hJ0-d2-AUf">
-                            <rect key="frame" x="20" y="20" width="200" height="88"/>
+                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="hJ0-d2-AUf">
+                            <rect key="frame" x="20" y="9" width="200" height="150"/>
                             <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="gKs-iU-lMn">
-                                <size key="itemSize" width="50" height="50"/>
+                                <size key="itemSize" width="78" height="110"/>
                                 <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                 <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                 <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                             </collectionViewFlowLayout>
                             <cells>
                                 <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cellBadge" id="4m7-Nx-MSa" customClass="BadgeCollectionViewCell" customModule="bertha" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="6" width="52" height="76"/>
+                                    <rect key="frame" x="0.0" y="15" width="80" height="120"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                        <rect key="frame" x="0.0" y="0.0" width="52" height="76"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="80" height="120"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CLh-eu-SBn">
-                                                <rect key="frame" x="0.0" y="52" width="52" height="24"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="8"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CLh-eu-SBn">
+                                                <rect key="frame" x="0.0" y="97" width="80" height="17"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                                 <color key="textColor" red="0.23529411764705882" green="0.19215686274509802" blue="0.31764705882352939" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ktD-C2-hCW">
-                                                <rect key="frame" x="2" y="0.0" width="48" height="48"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ktD-C2-hCW">
+                                                <rect key="frame" x="-20.5" y="0.0" width="121" height="93"/>
                                             </imageView>
                                         </subviews>
                                     </view>
                                     <color key="backgroundColor" red="0.76470588235294112" green="0.92941176470588238" blue="0.92156862745098034" alpha="1" colorSpace="calibratedRGB"/>
-                                    <size key="customSize" width="52" height="76"/>
+                                    <constraints>
+                                        <constraint firstItem="CLh-eu-SBn" firstAttribute="leading" secondItem="4m7-Nx-MSa" secondAttribute="leading" id="0T3-cz-hpJ"/>
+                                        <constraint firstAttribute="trailing" secondItem="CLh-eu-SBn" secondAttribute="trailing" id="M4d-LY-mdI"/>
+                                        <constraint firstItem="ktD-C2-hCW" firstAttribute="centerX" secondItem="4m7-Nx-MSa" secondAttribute="centerX" id="f3t-pY-OqV"/>
+                                        <constraint firstItem="ktD-C2-hCW" firstAttribute="top" secondItem="4m7-Nx-MSa" secondAttribute="top" id="gXh-Wo-4QE"/>
+                                        <constraint firstAttribute="bottom" secondItem="CLh-eu-SBn" secondAttribute="bottom" constant="7" id="qzo-Sx-B36"/>
+                                        <constraint firstItem="ktD-C2-hCW" firstAttribute="width" secondItem="4m7-Nx-MSa" secondAttribute="height" multiplier="1:1" id="ulp-zs-C0v"/>
+                                        <constraint firstItem="CLh-eu-SBn" firstAttribute="top" secondItem="ktD-C2-hCW" secondAttribute="bottom" constant="4" id="yQZ-HZ-OCQ"/>
+                                    </constraints>
+                                    <size key="customSize" width="80" height="120"/>
                                     <connections>
                                         <outlet property="image" destination="ktD-C2-hCW" id="NPH-LG-Ead"/>
                                         <outlet property="title" destination="CLh-eu-SBn" id="ioe-7Z-W6q"/>

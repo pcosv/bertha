@@ -46,7 +46,7 @@ class ViewController: UIViewController, iCarouselDelegate, iCarouselDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         data.updateCards()
-        concepts = data.cards
+        //concepts = data.cards
         
         blurView.isHidden = true
         
