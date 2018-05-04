@@ -65,7 +65,7 @@
                                     <action selector="openGiveUpView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jkh-ky-ggf"/>
                                 </connections>
                             </button>
-                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vx9-TG-jfW">
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vx9-TG-jfW">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" id="hBL-ON-l9D">
@@ -78,17 +78,14 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="vx9-TG-jfW"/>
-                            </mask>
-                        </variation>
                     </view>
                     <connections>
                         <outlet property="badgesCollectionView" destination="hJ0-d2-AUf" id="a9J-Ac-5d8"/>
                         <outlet property="blurView" destination="vx9-TG-jfW" id="HFp-2d-rbO"/>
+                        <outlet property="cancelGiveUp" destination="HAi-Ou-zaE" id="PWk-aE-bkZ"/>
                         <outlet property="carouselView" destination="gey-Bb-2Ak" id="9nb-JY-xHP"/>
                         <outlet property="chooseButton" destination="TvF-d0-f2F" id="cSe-z0-uFz"/>
+                        <outlet property="confirmGiveUp" destination="AiR-u5-ao2" id="OKG-0P-ZfK"/>
                         <outlet property="congratsButton" destination="GrZ-hY-bke" id="fes-89-e2D"/>
                         <outlet property="congratsView" destination="VK5-2A-053" id="BQ5-ot-Lta"/>
                         <outlet property="giveUpButton" destination="UmN-x8-KWz" id="nBb-pp-2EV"/>
@@ -171,6 +168,13 @@
                                 </collectionViewCell>
                             </cells>
                         </collectionView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="meus selos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SlE-tI-Hhy">
+                            <rect key="frame" x="20" y="15" width="92" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                     </subviews>
                     <color key="backgroundColor" red="0.61176470589999998" green="0.1529411765" blue="0.8980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>

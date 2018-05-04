@@ -26,6 +26,12 @@ class ViewController: UIViewController, iCarouselDelegate, iCarouselDataSource {
     //botão de desistir
     @IBOutlet weak var giveUpButton: UIButton!
     
+    //botão que confirma desistência
+    @IBOutlet weak var confirmGiveUp: UIButton!
+    
+    //botão que cancela desistência
+    @IBOutlet weak var cancelGiveUp: UIButton!
+    
     // modal inferior com selos alcançados
     @IBOutlet weak var selosView: UIView!
   
@@ -86,6 +92,8 @@ class ViewController: UIViewController, iCarouselDelegate, iCarouselDataSource {
         giveUpView.layer.cornerRadius = 10
         //giveUpView.addTarget(self, action: #selector(toBadge), for: .touchUpInside)
         giveUpView.layer.cornerRadius = 10
+        confirmGiveUp.layer.cornerRadius = 10
+        cancelGiveUp.layer.cornerRadius = 10
         
         self.view.addSubview(giveUpView)
         self.view.addSubview(selosView)
