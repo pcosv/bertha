@@ -115,6 +115,15 @@ class ViewController: UIViewController, iCarouselDelegate, iCarouselDataSource {
         
         super.awakeFromNib()
     }
+  
+    func isDoingChallenge() -> Bool {
+      for card in data.cards {
+        if card.doing {
+          return true
+        }
+      }
+      return false
+    }
 
     
 
