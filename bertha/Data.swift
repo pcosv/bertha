@@ -34,7 +34,7 @@ class Data {
         
         if (challenges.count != 10 && concepts.count != 10) {
             self.concepts = [
-                Concept(title: "Democracia", description: "É um tipo de governo em que todas as decisões políticas importantes estão com o povo, que elegem seus representantes por meio do voto.\n\n\n\nMas você sabia que as mulheres demoraram para conseguir o direito do voto?", context: context),
+                Concept(title: "Democracia", description: "É um tipo de governo em que todas as decisões políticas importantes estão com o povo, que elegem seus representantes por meio do voto.\n\nMas você sabia que as mulheres demoraram para conseguir o direito do voto?", context: context),
                 Concept(title: "Representatividade", description: "É representar determinado grupo na esfera política e social como forma de dar voz aos seus integrantes nas decisões tomadas.\n\nMas quantas super heroinas você conhece?", context: context),
                 Concept(title: "Direitos Humanos", description: "Os direitos humanos são direitos inerentes a todos os seres humanos, independentemente de raça, sexo, nacionalidade, etnia, idioma, religião ou qualquer outra condição.\n\nMas você sabe exatamente quais são eles?", context: context),
                 Concept(title: "Segunda Guerra Mundial", description: "Foi um conflito militar global entre os países mais poderosos da época e que foi marcado por inúmeros ataques contra civis, como o Holocausto e a utilização de armas atômicas.\n\nMas você já se perguntou sobre o papel das mulheres nessa guerra?", context: context),
