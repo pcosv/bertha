@@ -45,6 +45,12 @@ class ViewController: UIViewController, iCarouselDelegate, iCarouselDataSource {
     
     @IBOutlet weak var badgesCollectionView: UICollectionView!
   
+    @IBOutlet weak var pointsLabel: UILabel!
+    
+    @IBOutlet weak var hideViewRight: UIView!
+    @IBOutlet weak var hideViewLeft: UIView!
+    
+    var points = 0
     var challenges = [Challenge]()
     var concepts = [Concept]()
     var challengeChosen = false
@@ -60,10 +66,14 @@ class ViewController: UIViewController, iCarouselDelegate, iCarouselDataSource {
         data.updateCards()
         //concepts = data.cards
         
+        hideViewLeft.isHidden = true
+        hideViewRight.isHidden = true
+
         blurView.isHidden = true
         giveUpView.isHidden = true
         giveUpButton.isHidden = true
       
+        pointsLabel.text = "\(points)"
         
         // view de selos
         selosView.frame = CGRect(x: 0, y: view.frame.maxY, width: view.frame.width, height: view.frame.height/3)
