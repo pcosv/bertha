@@ -146,6 +146,7 @@
 				DEAC756B209A2AD3006B9D3A /* ViewController+Carousel.swift */,
 				3F707049209A39050010631E /* ViewController+animation.swift */,
 				4803DB14209B312A00F0004C /* ViewController+CollectionView.swift */,
+				48632153209B93F90047BD42 /* ViewController+ButtonActions.swift */,
 				576FBD4D20926512005E0C9D /* Concept.swift */,
 				57038B6520911B04003051CE /* Challenge.swift */,
 				57AA84A92091170100B9A1A8 /* Main.storyboard */,
@@ -154,7 +155,6 @@
 				57AA84B12091170200B9A1A8 /* Info.plist */,
 				48658982209730B40005E3DD /* Data.swift */,
 				4803DB18209B411A00F0004C /* BadgeCollectionViewCell.swift */,
-				48632153209B93F90047BD42 /* ViewController+ButtonActions.swift */,
 			);
 			path = bertha;
 			sourceTree = "<group>";

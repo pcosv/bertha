@@ -25,6 +25,10 @@ extension ViewController {
         chooseButton.setTitle("quero este!", for: UIControlState.normal)
       
         challengeChosen = false
+        giveUpButton.isHidden = true
+        
+        carouselView.isScrollEnabled = true
+        
     } else {
         print(self.carouselView.currentItemIndex)
         giveUpButton.isHidden = false
@@ -32,7 +36,10 @@ extension ViewController {
         //data.concepts[self.carouselView.currentItemIndex].doing = true
         labelApresentacao.text = "este é seu desafio atual"
         chooseButton.setTitle("concluir", for: UIControlState.normal)
-      
+        
+        // disable scroll
+        carouselView.isScrollEnabled = false
+        
         challengeChosen = true
     }
   }
@@ -51,7 +58,6 @@ extension ViewController {
       chooseButton.setTitle("quero este!", for: UIControlState.normal)
       challengeChosen = false
   }
-  
   
   @IBAction func didntGiveUp(_ sender: Any) {
       giveUpView.isHidden = true

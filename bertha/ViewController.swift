@@ -116,7 +116,7 @@ class ViewController: UIViewController, iCarouselDelegate, iCarouselDataSource {
         if starPressed == 0{
             starPressed = 1
             
-            // subir
+            // up
             UIView.animate(withDuration: 0.3, animations: {
                 self.selosView.frame.origin = CGPoint(x: 0, y: 2*self.view.frame.height/3)
             })
@@ -125,7 +125,7 @@ class ViewController: UIViewController, iCarouselDelegate, iCarouselDataSource {
         else {
             starPressed = 0
             
-            // descer
+            // down
             UIView.animate(withDuration: 0.3, animations: {
                 self.selosView.frame.origin = CGPoint(x: 0, y: self.view.frame.maxY)
             })
