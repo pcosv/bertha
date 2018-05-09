@@ -73,7 +73,7 @@ class ViewController: UIViewController, iCarouselDelegate, iCarouselDataSource {
         giveUpView.isHidden = true
         giveUpButton.isHidden = true
       
-        pointsLabel.text = "\(points)"
+        pointsLabel.text = ""
         
         // view de selos
         selosView.frame = CGRect(x: 0, y: view.frame.maxY, width: view.frame.width, height: view.frame.height/3)

@@ -25,7 +25,11 @@ extension ViewController {
         let front = CardUIView(frame: CGRect(x: 0, y: 0, width: carouselView.frame.width * 0.75, height: carouselView.frame.height))
         front.backgroundColor = #colorLiteral(red: 0.7647058824, green: 0.9294117647, blue: 0.9215686275, alpha: 1)
         front.layer.cornerRadius = 10
-        
+        front.layer.shadowColor = UIColor.black.cgColor
+        front.layer.shadowOpacity = 0.3
+        front.layer.shadowOffset = CGSize(width: 0, height: 5)
+        front.layer.shadowRadius = 5
+
         // concept title
         let title = UILabel(frame: CGRect(x: carousel.frame.width*0.04, y: carousel.frame.height*0.05, width: front.frame.width*0.9, height: front.frame.height*0.15))
         title.text = self.data.cards[index].title
@@ -34,7 +38,7 @@ extension ViewController {
         title.numberOfLines = 0
         front.title = title
     
-        // concept body 
+        // concept body
         let body = UILabel(frame: CGRect(x: carousel.frame.width*0.04, y: carousel.frame.height*0.18, width: front.frame.width*0.9, height: front.frame.height*0.75))
         body.text = self.data.cards[index].concept
         body.font = UIFont.boldSystemFont(ofSize: CGFloat(15.0))
@@ -43,7 +47,8 @@ extension ViewController {
         front.body = body
         
         // button turn card
-        let buttonTurnCard = NewUIButton(frame: CGRect(x: carousel.frame.width*0.63, y: carousel.frame.height*0.04, width: front.frame.height*0.09, height: front.frame.height*0.09))
+        let temp = front.frame.height*0.09
+        let buttonTurnCard = NewUIButton(frame: CGRect(x: carousel.frame.width*0.63, y: carousel.frame.height*0.04, width: temp, height: temp))
         buttonTurnCard.setImage(UIImage(named: "turn-left.png"), for: .normal)
         buttonTurnCard.addTarget(self, action: #selector(flipCell), for: .touchUpInside)
         buttonTurnCard.view = front
