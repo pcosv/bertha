@@ -90,4 +90,6 @@ extension ViewController {
       giveUpView.isHidden = true
       blurView.isHidden = true
   }
+    
+    
 }

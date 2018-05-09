@@ -50,6 +50,8 @@ class ViewController: UIViewController, iCarouselDelegate, iCarouselDataSource {
     @IBOutlet weak var hideViewRight: UIView!
     @IBOutlet weak var hideViewLeft: UIView!
     
+    @IBOutlet weak var leaveBadges: UIButton!
+    
     var points = 0
     var challenges = [Challenge]()
     var concepts = [Concept]()
@@ -68,6 +70,7 @@ class ViewController: UIViewController, iCarouselDelegate, iCarouselDataSource {
         
         hideViewLeft.isHidden = true
         hideViewRight.isHidden = true
+        leaveBadges.isHidden = true
 
         blurView.isHidden = true
         giveUpView.isHidden = true
@@ -125,6 +128,7 @@ class ViewController: UIViewController, iCarouselDelegate, iCarouselDataSource {
         
         if starPressed == 0{
             starPressed = 1
+            leaveBadges.isHidden = false
             
             // up
             UIView.animate(withDuration: 0.3, animations: {
@@ -142,6 +146,19 @@ class ViewController: UIViewController, iCarouselDelegate, iCarouselDataSource {
         }
  
     }
+    
+    @IBAction func leaveBadgesView(_ sender: Any) {
+        if starPressed == 1 {
+            starPressed = 0
+        }
+        leaveBadges.isHidden = true
+        
+        // down
+        UIView.animate(withDuration: 0.3, animations: {
+            self.selosView.frame.origin = CGPoint(x: 0, y: self.view.frame.maxY)
+        })
+    }
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
