@@ -31,6 +31,28 @@ extension ViewController {
         congratsView.isHidden = false
         self.view.addSubview(congratsView)
         blurView.isHidden = false
+        if points == 10{
+            chooseButton.isHidden = true
+            let a = self.view.frame.width*0.05
+            let b = self.view.frame.height*0.35
+            let c = self.view.frame.width*0.9
+            let d = self.view.frame.height*0.30
+            let end = UIView(frame: CGRect(x: a, y: b, width: c, height: d))
+            end.backgroundColor = #colorLiteral(red: 0.5176470588, green: 0.2470588235, blue: 0.8274509804, alpha: 1)
+            end.layer.cornerRadius = 10
+            
+            let congratulations = UILabel(frame: CGRect(x: a, y: b, width: c, height: d))
+            congratulations.text = "Parabéns! Você concluiu todos os desafios! Esperamos tê-la ajudado em sua jornada político cidadã!"
+            congratulations.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+            congratulations.textAlignment = .center
+            congratulations.font = UIFont.boldSystemFont(ofSize: CGFloat(20.0))
+            congratulations.numberOfLines = 0
+            
+            end.addSubview(congratulations)
+            
+            self.view.addSubview(end)
+            self.view.addSubview(congratulations)
+        }
         labelApresentacao.text = "escolha seu desafio"
         chooseButton.setTitle("quero este!", for: UIControlState.normal)
       
