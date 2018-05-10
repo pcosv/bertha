@@ -107,7 +107,7 @@ extension ViewController {
             back?.instruction = instr
             
             
-            // link
+            // link to web
             let linkButton = NewUIButton(frame: CGRect(x: carouselView!.frame.width*0.65, y: carouselView!.frame.height*0.88, width: back!.frame.width*0.09, height: back!.frame.height*0.09))
             linkButton.setImage(UIImage(named: "link.png"), for: .normal)
             linkButton.contentMode = .scaleAspectFit

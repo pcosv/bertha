@@ -14,8 +14,5 @@ class CardUIView: UIView {
     var icon : UIImageView?
     var link : UIButton?
     var instruction : UILabel?
-    var conceptImage : UIImage?
-    var challengeTitle : UILabel?
-    var challengeBody : UILabel?
     var isOpen: Bool! = true    
 }
