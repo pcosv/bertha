@@ -31,6 +31,7 @@ extension ViewController {
         congratsView.isHidden = false
         self.view.addSubview(congratsView)
         blurView.isHidden = false
+        labelApresentacao.text = "escolha seu desafio"
         chooseButton.setTitle("quero este!", for: UIControlState.normal)
       
         challengeChosen = false
@@ -76,6 +77,7 @@ extension ViewController {
         carouselView.scroll(byNumberOfItems: data.cards.count*(-1), duration: 0.5)
       }
     
+      labelApresentacao.text = "escolha seu desafio"
       chooseButton.setTitle("quero este!", for: UIControlState.normal)
       challengeChosen = false
     

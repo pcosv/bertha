@@ -71,18 +71,18 @@ extension ViewController {
             // animação de flip
             CardUIView.transition(with: back!, duration: 0.8, options: .transitionFlipFromLeft, animations: nil, completion: nil)
 
-            let title = UILabel(frame: CGRect(x: 15, y: 20, width: 250, height: 50))
-            title.text = "Desafio"
+            let title = UILabel(frame: CGRect(x: carouselView!.frame.width*0.04, y: carouselView!.frame.height*0.05, width: back!.frame.width*0.9, height: back!.frame.height*0.15))
             title.font = UIFont.boldSystemFont(ofSize: CGFloat(20.0))
             title.textColor = #colorLiteral(red: 0.5176470588, green: 0.2470588235, blue: 0.8274509804, alpha: 1)
             title.numberOfLines = 0
+            title.text = "Desafio"
             back?.title = title
             
-            let body = UILabel(frame: CGRect(x: 15, y: 70, width: 250, height: 250))
-            body.text = self.data.cards[carouselView.currentItemIndex].challenge.challenge
+            let body = UILabel(frame: CGRect(x: carouselView!.frame.width*0.04, y: carouselView!.frame.height*0.18, width: back!.frame.width*0.9, height: back!.frame.height*0.75))
             body.font = UIFont.boldSystemFont(ofSize: CGFloat(15.0))
             body.textColor = #colorLiteral(red: 0.2352941176, green: 0.1921568627, blue: 0.3176470588, alpha: 1)
             body.numberOfLines = 0
+            body.text = self.data.cards[carouselView.currentItemIndex].challenge.challenge
             back?.body = body
 
             back?.addSubview(title)
@@ -93,19 +93,19 @@ extension ViewController {
             UIView.transition(with: carouselView.currentItemView!, duration: 0.8, options: .transitionFlipFromLeft, animations: nil, completion: nil)
 
             // title
-            let title = UILabel(frame: CGRect(x: 15, y: 20, width: 250, height: 50))
-            title.text = self.data.cards[carouselView.currentItemIndex].title
+            let title = UILabel(frame: CGRect(x: carouselView!.frame.width*0.04, y: carouselView!.frame.height*0.05, width: back!.frame.width*0.9, height: back!.frame.height*0.15))
             title.font = UIFont.boldSystemFont(ofSize: CGFloat(20.0))
             title.textColor = #colorLiteral(red: 0.5176470588, green: 0.2470588235, blue: 0.8274509804, alpha: 1)
             title.numberOfLines = 0
+            title.text = self.data.cards[carouselView.currentItemIndex].title
             back?.title = title
             
             // body
-            let body = UILabel(frame: CGRect(x: 15, y: 70, width: 250, height: 250))
-            body.text = self.data.cards[carouselView.currentItemIndex].concept
+            let body = UILabel(frame: CGRect(x: carouselView!.frame.width*0.04, y: carouselView!.frame.height*0.18, width: back!.frame.width*0.9, height: back!.frame.height*0.75))
             body.font = UIFont.boldSystemFont(ofSize: CGFloat(15.0))
             body.textColor = #colorLiteral(red: 0.2352941176, green: 0.1921568627, blue: 0.3176470588, alpha: 1)
             body.numberOfLines = 0
+            body.text = self.data.cards[carouselView.currentItemIndex].concept
             back?.body = body
         
             back?.addSubview(title)
