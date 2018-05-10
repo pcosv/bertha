@@ -11,6 +11,7 @@ import Foundation
 class CardUIView: UIView {
     var title : UILabel?
     var body : UILabel?
+    var icon : UIImageView?
     var conceptImage : UIImage?
     var challengeTitle : UILabel?
     var challengeBody : UILabel?

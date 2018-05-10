@@ -52,7 +52,8 @@ extension ViewController {
         buttonTurnCard.setImage(UIImage(named: "turn-left.png"), for: .normal)
         buttonTurnCard.addTarget(self, action: #selector(flipCell), for: .touchUpInside)
         buttonTurnCard.view = front
-    
+
+
         front.addSubview(buttonTurnCard)
         front.addSubview(title)
         front.addSubview(body)
@@ -63,6 +64,7 @@ extension ViewController {
     // essa função deve receber o desafio atual e mudar as labels de acordo com o flip
     @objc func flipCell(_ sender: NewUIButton) {
         let back = sender.view
+        back?.icon?.isHidden = true
         back?.title?.isHidden = true
         back?.body?.isHidden = true
 
@@ -84,7 +86,15 @@ extension ViewController {
             body.numberOfLines = 0
             body.text = self.data.cards[carouselView.currentItemIndex].challenge.challenge
             back?.body = body
-
+            
+//            // concept icon
+//            var image:UIImage = UIImage(named:"pesquisa.png")!
+//            var icon = UIImageView(image: image)
+//            icon.contentMode = .scaleAspectFit
+//            icon.frame = CGRect(x: carouselView!.frame.width*0.04, y: carouselView!.frame.height*0.75, width: back!.frame.width*0.25, height: back!.frame.height*0.25)
+//            back?.icon = icon
+            
+            back?.addSubview(icon)
             back?.addSubview(title)
             back?.addSubview(body)
         }
