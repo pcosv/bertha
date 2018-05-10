@@ -69,6 +69,8 @@ extension ViewController {
         back?.icon?.isHidden = true
         back?.title?.isHidden = true
         back?.body?.isHidden = true
+        back?.link?.isHidden = true
+        back?.instruction?.isHidden = true
 
         if (back?.isOpen)! {
             back?.isOpen = false
@@ -82,7 +84,7 @@ extension ViewController {
             title.text = "Desafio"
             back?.title = title
             
-            let body = UILabel(frame: CGRect(x: carouselView!.frame.width*0.04, y: carouselView!.frame.height*0.18, width: back!.frame.width*0.9, height: back!.frame.height*0.75))
+            let body = UILabel(frame: CGRect(x: carouselView!.frame.width*0.04, y: carouselView!.frame.height*0.18, width: back!.frame.width*0.9, height: back!.frame.height*0.3))
             body.font = UIFont.boldSystemFont(ofSize: CGFloat(15.0))
             body.textColor = #colorLiteral(red: 0.2352941176, green: 0.1921568627, blue: 0.3176470588, alpha: 1)
             body.numberOfLines = 0
@@ -91,11 +93,29 @@ extension ViewController {
             
             // concept icon
             let image:UIImage = UIImage(data: self.data.cards[carouselView.currentItemIndex].challenge.image as Foundation.Data, scale: 1.0)!
-            var icon = UIImageView(image: image)
+            let icon = UIImageView(image: image)
             icon.contentMode = .scaleAspectFit
-            icon.frame = CGRect(x: carouselView!.frame.width*0.27, y: carouselView!.frame.height*0.75, width: back!.frame.width*0.25, height: back!.frame.height*0.25)
+            icon.frame = CGRect(x: carouselView!.frame.width*0.27, y: carouselView!.frame.height*0.5, width: back!.frame.width*0.25, height: back!.frame.height*0.25)
             back?.icon = icon
             
+            // label instruction
+            let instr = UILabel(frame: CGRect(x: carouselView!.frame.width*0.45, y: carouselView!.frame.height*0.87, width: back!.frame.width*0.9, height: back!.frame.height*0.15))
+            instr.font = UIFont.boldSystemFont(ofSize: CGFloat(10.0))
+            instr.textColor = #colorLiteral(red: 0.5176470588, green: 0.2470588235, blue: 0.8274509804, alpha: 1)
+            instr.numberOfLines = 0
+            instr.text = "ir ao material"
+            back?.instruction = instr
+            
+            
+            // link
+            let linkButton = NewUIButton(frame: CGRect(x: carouselView!.frame.width*0.65, y: carouselView!.frame.height*0.88, width: back!.frame.width*0.09, height: back!.frame.height*0.09))
+            linkButton.setImage(UIImage(named: "link.png"), for: .normal)
+            linkButton.contentMode = .scaleAspectFit
+            linkButton.addTarget(self, action: #selector(linkFunc), for: .touchUpInside)
+            back?.link = linkButton
+            
+            back?.addSubview(instr)
+            back?.addSubview(linkButton)
             back?.addSubview(icon)
             back?.addSubview(title)
             back?.addSubview(body)
@@ -123,5 +143,6 @@ extension ViewController {
             back?.addSubview(title)
             back?.addSubview(body)
         }
-    }
+    }    
+    
 }

@@ -12,6 +12,8 @@ class CardUIView: UIView {
     var title : UILabel?
     var body : UILabel?
     var icon : UIImageView?
+    var link : UIButton?
+    var instruction : UILabel?
     var conceptImage : UIImage?
     var challengeTitle : UILabel?
     var challengeBody : UILabel?

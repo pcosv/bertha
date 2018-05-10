@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="ipad9_7" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,11 +15,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="bertha" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="escolha seu desafio" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bWT-3O-C41">
-                                <rect key="frame" x="0.0" y="86" width="768" height="77"/>
+                                <rect key="frame" x="0.0" y="86" width="414" height="41.333333333333343"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="bWT-3O-C41" secondAttribute="height" multiplier="10:1" id="APX-tM-2Xb"/>
                                 </constraints>
@@ -28,7 +28,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TvF-d0-f2F">
-                                <rect key="frame" x="330" y="955" width="108" height="44"/>
+                                <rect key="frame" x="153" y="667" width="108" height="44"/>
                                 <color key="backgroundColor" red="0.61176470588235299" green="0.15294117647058825" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="108" id="cUZ-fz-IsC"/>
@@ -42,14 +42,8 @@
                                     <action selector="chooseChallenge:" destination="BYZ-38-t0r" eventType="touchUpInside" id="e7L-EO-HIc"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vh8-Jr-uzN" userLabel="Leave Badges">
-                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
-                                <connections>
-                                    <action selector="leaveBadgesView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dZf-Pg-6PV"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nbZ-F4-geK">
-                                <rect key="frame" x="703" y="45" width="37" height="37"/>
+                                <rect key="frame" x="349" y="45" width="37" height="37"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="nbZ-F4-geK" secondAttribute="height" multiplier="1:1" id="Is2-4P-psM"/>
                                 </constraints>
@@ -59,7 +53,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" horizontalCompressionResistancePriority="200" verticalCompressionResistancePriority="200" translatesAutoresizingMaskIntoConstraints="NO" id="gey-Bb-2Ak" customClass="iCarousel">
-                                <rect key="frame" x="0.0" y="188" width="768" height="648"/>
+                                <rect key="frame" x="0.0" y="152.33333333333334" width="414" height="431.33333333333326"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="39s-F0-A1I"/>
@@ -67,15 +61,21 @@
                                 </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pJG-Hj-Gkh">
-                                <rect key="frame" x="0.0" y="20" width="223" height="1004"/>
+                                <rect key="frame" x="0.0" y="20" width="46" height="716"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bEH-T4-9IU">
-                                <rect key="frame" x="745" y="20" width="23" height="1004"/>
+                                <rect key="frame" x="391" y="20" width="23" height="716"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vh8-Jr-uzN" userLabel="Leave Badges">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <connections>
+                                    <action selector="leaveBadgesView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dZf-Pg-6PV"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UmN-x8-KWz">
-                                <rect key="frame" x="250" y="950.5" width="51" height="53"/>
+                                <rect key="frame" x="73" y="662.33333333333337" width="51" height="53.333333333333371"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="51" id="jk5-P8-OKF"/>
                                 </constraints>
@@ -87,7 +87,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="points" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EcW-7T-uLS">
-                                <rect key="frame" x="695" y="37" width="53" height="53"/>
+                                <rect key="frame" x="341" y="37" width="53" height="53"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="EcW-7T-uLS" secondAttribute="height" multiplier="1:1" id="Kui-h5-gAQ"/>
                                 </constraints>
@@ -96,9 +96,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vx9-TG-jfW">
-                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="hBL-ON-l9D">
-                                    <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 </view>
                                 <blurEffect style="light"/>

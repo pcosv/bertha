@@ -160,6 +160,14 @@ class ViewController: UIViewController, iCarouselDelegate, iCarouselDataSource {
     }
     
     
+    @objc func linkFunc(_ sender: NewUIButton) -> Void {
+        print("oi")
+        if let url = URL(string: self.data.cards[carouselView.currentItemIndex].challenge.media) {
+            UIApplication.shared.open(url, options: [:])
+        }
+    }
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
