@@ -21,6 +21,7 @@ extension ViewController {
     }
     
     func carousel(_ carousel: iCarousel, viewForItemAt index: Int, reusing view: UIView?) -> UIView {
+
         
         let front = CardUIView(frame: CGRect(x: 0, y: 0, width: carouselView.frame.width * 0.75, height: carouselView.frame.height))
         front.backgroundColor = #colorLiteral(red: 0.7647058824, green: 0.9294117647, blue: 0.9215686275, alpha: 1)
@@ -54,7 +55,6 @@ extension ViewController {
         buttonTurnCard.setImage(UIImage(named: "turn-left.png"), for: .normal)
         buttonTurnCard.addTarget(self, action: #selector(flipCell), for: .touchUpInside)
         buttonTurnCard.view = front
-
 
         front.addSubview(buttonTurnCard)
         front.addSubview(title)

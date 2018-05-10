@@ -17,9 +17,10 @@ extension ViewController:UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         data.updateCards()
         var cell:BadgeCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellBadge", for: indexPath) as! BadgeCollectionViewCell
-        //currentIndex = indexPath.row
+        
         cell.layer.cornerRadius = 10
         cell.title.text = data.badges[indexPath.row].title
+        cell.title.adjustsFontSizeToFitWidth = true
         cell.image.image = UIImage(data: data.badges[indexPath.row].challenge.image as Foundation.Data)
         return cell
     }

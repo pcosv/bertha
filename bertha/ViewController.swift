@@ -57,6 +57,7 @@ class ViewController: UIViewController, iCarouselDelegate, iCarouselDataSource {
     var concepts = [Concept]()
     var challengeChosen = false
     var currentIndex = 0
+    var lastIndex = 0;
     
     // elementos da célula
     
