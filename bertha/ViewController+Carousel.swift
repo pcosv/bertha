@@ -32,7 +32,7 @@ extension ViewController {
         front.layer.shadowRadius = 5
 
         // concept title
-        let title = UILabel(frame: CGRect(x: carousel.frame.width*0.04, y: carousel.frame.height*0.05, width: front.frame.width*0.9, height: front.frame.height*0.15))
+        let title = UILabel(frame: CGRect(x: carousel.frame.width*0.075, y: carousel.frame.height*0.05, width: front.frame.width*0.7, height: front.frame.height*0.15))
         title.text = self.data.cards[index].title
         title.font = UIFont.boldSystemFont(ofSize: CGFloat(20.0))
         title.textColor = #colorLiteral(red: 0.5176470588, green: 0.2470588235, blue: 0.8274509804, alpha: 1)
@@ -41,7 +41,7 @@ extension ViewController {
         front.title = title
     
         // concept body
-        let body = UILabel(frame: CGRect(x: carousel.frame.width*0.04, y: carousel.frame.height*0.18, width: front.frame.width*0.9, height: front.frame.height*0.75))
+        let body = UILabel(frame: CGRect(x: carousel.frame.width*0.075, y: carousel.frame.height*0.18, width: front.frame.width*0.8, height: front.frame.height*0.75))
         body.text = self.data.cards[index].concept
         body.font = UIFont.boldSystemFont(ofSize: CGFloat(15.0))
         body.textColor = #colorLiteral(red: 0.2352941176, green: 0.1921568627, blue: 0.3176470588, alpha: 1)
@@ -77,14 +77,14 @@ extension ViewController {
             // animação de flip
             CardUIView.transition(with: back!, duration: 0.8, options: .transitionFlipFromLeft, animations: nil, completion: nil)
 
-            let title = UILabel(frame: CGRect(x: carouselView!.frame.width*0.04, y: carouselView!.frame.height*0.05, width: back!.frame.width*0.9, height: back!.frame.height*0.15))
+            let title = UILabel(frame: CGRect(x: carouselView!.frame.width*0.075, y: carouselView!.frame.height*0.05, width: back!.frame.width*0.7, height: back!.frame.height*0.15))
             title.font = UIFont.boldSystemFont(ofSize: CGFloat(20.0))
             title.textColor = #colorLiteral(red: 0.5176470588, green: 0.2470588235, blue: 0.8274509804, alpha: 1)
             title.numberOfLines = 0
             title.text = "Desafio"
             back?.title = title
             
-            let body = UILabel(frame: CGRect(x: carouselView!.frame.width*0.04, y: carouselView!.frame.height*0.18, width: back!.frame.width*0.9, height: back!.frame.height*0.3))
+            let body = UILabel(frame: CGRect(x: carouselView!.frame.width*0.075, y: carouselView!.frame.height*0.18, width: back!.frame.width*0.8, height: back!.frame.height*0.3))
             body.font = UIFont.boldSystemFont(ofSize: CGFloat(15.0))
             body.textColor = #colorLiteral(red: 0.2352941176, green: 0.1921568627, blue: 0.3176470588, alpha: 1)
             body.numberOfLines = 0
@@ -100,7 +100,7 @@ extension ViewController {
             
             // label instruction
             let instr = UILabel(frame: CGRect(x: carouselView!.frame.width*0.45, y: carouselView!.frame.height*0.87, width: back!.frame.width*0.9, height: back!.frame.height*0.15))
-            instr.font = UIFont.boldSystemFont(ofSize: CGFloat(10.0))
+            instr.font = UIFont.boldSystemFont(ofSize: CGFloat(11.0))
             instr.textColor = #colorLiteral(red: 0.5176470588, green: 0.2470588235, blue: 0.8274509804, alpha: 1)
             instr.numberOfLines = 0
             instr.text = "ir ao material"
@@ -125,7 +125,7 @@ extension ViewController {
             UIView.transition(with: carouselView.currentItemView!, duration: 0.8, options: .transitionFlipFromLeft, animations: nil, completion: nil)
 
             // title
-            let title = UILabel(frame: CGRect(x: carouselView!.frame.width*0.04, y: carouselView!.frame.height*0.05, width: back!.frame.width*0.9, height: back!.frame.height*0.15))
+            let title = UILabel(frame: CGRect(x: carouselView!.frame.width*0.075, y: carouselView!.frame.height*0.05, width: back!.frame.width*0.7, height: back!.frame.height*0.15))
             title.font = UIFont.boldSystemFont(ofSize: CGFloat(20.0))
             title.textColor = #colorLiteral(red: 0.5176470588, green: 0.2470588235, blue: 0.8274509804, alpha: 1)
             title.numberOfLines = 0
@@ -133,7 +133,7 @@ extension ViewController {
             back?.title = title
             
             // body
-            let body = UILabel(frame: CGRect(x: carouselView!.frame.width*0.04, y: carouselView!.frame.height*0.18, width: back!.frame.width*0.9, height: back!.frame.height*0.75))
+            let body = UILabel(frame: CGRect(x: carouselView!.frame.width*0.075, y: carouselView!.frame.height*0.18, width: back!.frame.width*0.8, height: back!.frame.height*0.75))
             body.font = UIFont.boldSystemFont(ofSize: CGFloat(15.0))
             body.textColor = #colorLiteral(red: 0.2352941176, green: 0.1921568627, blue: 0.3176470588, alpha: 1)
             body.numberOfLines = 0

@@ -23,12 +23,12 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="bWT-3O-C41" secondAttribute="height" multiplier="10:1" id="APX-tM-2Xb"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" red="0.23529411764705882" green="0.19215686274509802" blue="0.31764705882352939" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" red="0.61176470589999998" green="0.1529411765" blue="0.8980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TvF-d0-f2F">
-                                <rect key="frame" x="133.5" y="598" width="108" height="44"/>
+                                <rect key="frame" x="133.5" y="588" width="108" height="44"/>
                                 <color key="backgroundColor" red="0.61176470588235299" green="0.15294117647058825" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="108" id="cUZ-fz-IsC"/>
@@ -75,7 +75,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UmN-x8-KWz">
-                                <rect key="frame" x="53.5" y="593.5" width="51" height="53"/>
+                                <rect key="frame" x="53.5" y="573.5" width="51" height="73"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="51" id="jk5-P8-OKF"/>
                                 </constraints>
@@ -124,7 +124,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bEH-T4-9IU" secondAttribute="trailing" id="JY4-Cl-Edu"/>
                             <constraint firstItem="UmN-x8-KWz" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" symbolic="YES" id="Ke6-Ql-2bk"/>
                             <constraint firstItem="vx9-TG-jfW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="KwE-Us-PQn"/>
-                            <constraint firstItem="TvF-d0-f2F" firstAttribute="top" relation="greaterThanOrEqual" secondItem="gey-Bb-2Ak" secondAttribute="bottom" constant="25" id="Mlz-mn-NlU"/>
+                            <constraint firstItem="TvF-d0-f2F" firstAttribute="top" relation="greaterThanOrEqual" secondItem="gey-Bb-2Ak" secondAttribute="bottom" constant="15" id="Mlz-mn-NlU"/>
                             <constraint firstItem="bWT-3O-C41" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="NFi-fR-O1q"/>
                             <constraint firstItem="TvF-d0-f2F" firstAttribute="leading" secondItem="UmN-x8-KWz" secondAttribute="trailing" constant="29" id="TYt-NT-Eiw"/>
                             <constraint firstItem="nbZ-F4-geK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="U3s-dq-nbd"/>
@@ -142,7 +142,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gey-Bb-2Ak" secondAttribute="trailing" id="nvy-JL-ieC"/>
                             <constraint firstItem="gey-Bb-2Ak" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="q0H-Sp-pg3"/>
                             <constraint firstItem="TvF-d0-f2F" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="sIo-a2-F6B"/>
-                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="TvF-d0-f2F" secondAttribute="bottom" constant="25" id="tGM-Ln-kDh" userLabel="bottom = Choose Button.bottom + height*0.1"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="TvF-d0-f2F" secondAttribute="bottom" constant="35" id="tGM-Ln-kDh" userLabel="bottom = Choose Button.bottom + height*0.1"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="pJG-Hj-Gkh" secondAttribute="top" id="u7F-3E-CSW"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Vh8-Jr-uzN" secondAttribute="trailing" id="wHj-Sk-PeJ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bEH-T4-9IU" secondAttribute="bottom" id="wr5-3B-w4A"/>

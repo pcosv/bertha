@@ -69,7 +69,7 @@ extension ViewController {
         giveUpButton.isHidden = false
       data.cards[self.carouselView.currentItemIndex].doing = true
         //data.concepts[self.carouselView.currentItemIndex].doing = true
-        labelApresentacao.text = "este é seu desafio atual"
+        labelApresentacao.text = "este é seu desafio atual!"
         chooseButton.setTitle("concluir", for: UIControlState.normal)
         
         // disable scroll
